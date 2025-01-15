@@ -16,25 +16,29 @@
     background: var(--accent-color);
     color: #fff;
     position: relative;
+    transform: rotate(45deg) scale(1);
     transition: all 0.3s;
 }
 
 .link-dot-btn:hover > .link-dot{
-    transform: scale(3);
+    transform: rotate(45deg) scale(3);
 }
 
 .link-dot .link-dot-arrow{
-    background: url("/arrow-up-right.svg") no-repeat center;
+    background: url("/arrow-upward.svg") no-repeat center;
     background-size: contain;
     display: inline-block;
     width: 70%;
     height: 70%;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
     transition: all 0.3s;
 }
 
 .link-dot-btn:hover > .link-dot .link-dot-arrow{
-    animation: ArrowIn 0.6s forwards;
+    animation: ArrowIn 0.4s forwards;
 }
 
 .link-dot-btn:not(:hover) > .link-dot .link-dot-arrow{
@@ -144,37 +148,27 @@
 }
 
 @keyframes ArrowIn {
-    0% {
-        top: 50%;
-        left: 50%;
+    0%{
         opacity: 0;
-        transform: translate(-150%, 100%);
+        transform: translate(-50%, 100%);
     }
-    50%, 100%{
-        top: 50%;
-        left: 50%;
+    100%{
         opacity: 1;
-        transform: translate(-60%, -55%);
+        transform: translate(-50%, -50%);
     }
 }
 
 @keyframes ArrowOut {
     0% {
-        top: 50%;
-        left: 50%;
         opacity: 1;
         transform: translate(-50%, -50%);
     }
     90%{
-        top: 0%;
-        left: 100%;
         opacity: 0;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -100%);
     }
     100%{
-        top: 200%;
-        left: -100%;
         opacity: 0;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -100%);
     }
 }
