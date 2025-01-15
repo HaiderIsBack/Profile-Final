@@ -1,0 +1,32 @@
+
+.scroll-slider{
+    transition: all 0.3s;
+}
+
+.scroll-slider-dot{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    transition: all 0.3s;
+}
+
+.scroll-slider:hover .scroll-slider-dot{
+    width: 20px;
+    height: 20px;
+}
+
+.scroll-slider-container:hover .scroll-slider:not(:hover){
+    opacity: 0.2;
+}
+
+.scroll-slider-img{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: all 0.4s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.scroll-slider:hover .scroll-slider-img{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}

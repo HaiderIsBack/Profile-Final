@@ -1,0 +1,227 @@
+
+
+.link-btn,
+.link-dot-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.link-dot-btn .link-dot{
+  display: inline-block;
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: #fff;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.link-dot-btn:hover > .link-dot{
+  transform: scale(3);
+}
+
+.link-dot .link-dot-arrow{
+  background: url("/arrow-up-right.svg") no-repeat center;
+  background-size: contain;
+  display: inline-block;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.link-dot-btn:hover > .link-dot .link-dot-arrow{
+  animation: ArrowIn 0.7s forwards cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.link-dot-btn:not(:hover) > .link-dot .link-dot-arrow{
+  animation: ArrowOut 0.2s forwards;
+}
+
+.link-btn .link-text,
+.link-dot-btn .link-dot-text{
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: thin;
+  overflow: hidden;
+}
+
+.link-btn .link-text .hidden-text,
+.link-dot-btn .link-dot-text .hidden-text{
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.link-btn .link-text .text-1,
+.link-btn .link-text .text-2,
+.link-dot-btn .link-dot-text .text-1,
+.link-dot-btn .link-dot-text .text-2{
+  position: absolute;
+  top: 0%;
+  text-wrap: nowrap;
+  transition: color 0s, top 0.3s;
+  pointer-events: none;
+}
+
+.link-btn .link-text .text-2,
+.link-dot-btn .link-dot-text .text-2{
+  top: 100%;
+}
+
+.link-btn:hover .link-text .text-1,
+.link-dot-btn:hover .link-dot-text .text-1{
+  animation: TextSlideStart 0.3s forwards;
+}
+
+.link-btn:hover .link-text .text-2,
+.link-dot-btn:hover .link-dot-text .text-2{
+  animation: Text2SlideStart 0.3s forwards;
+}
+
+.link-btn:not(:hover) .link-text .text-1,
+.link-dot-btn:not(:hover) .link-dot-text .text-1{
+  animation: TextSlideEnd 0.3s forwards;
+}
+
+.link-btn:not(:hover) .link-text .text-2,
+.link-dot-btn:not(:hover) .link-dot-text .text-2{
+  animation: Text2SlideEnd 0.3s forwards;
+}
+
+@keyframes TextSlideStart {
+  0%{
+      top: 0%;
+  }
+  99%{
+      top: -100%;
+  }
+  100%{
+      top: 0%;
+      color: #fb4566;
+  }
+}
+
+@keyframes Text2SlideStart {
+  0%{
+      top: 100%;
+      color: #fb4566;
+  }
+  99%{
+      top: 0%;
+      color: #fb4566;
+  }
+  100%{
+      top: 100%;
+      color: #fff;
+  }
+}
+
+@keyframes TextSlideEnd {
+  0%{
+      top: 0%;
+      color: #fb4566;
+  }
+  99%{
+      top: -100%;
+  }
+  100%{
+      top: 0%;
+      color: #fff;
+  }
+}
+
+@keyframes Text2SlideEnd {
+  0%{
+      top: 100%;
+      color: #fff;
+  }
+  99%{
+      top: 0%;
+      color: #fff;
+  }
+  100%{
+      top: 100%;
+      color: #fb4566;
+  }
+}
+
+@keyframes ArrowIn {
+  0% {
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-150%, 100%);
+  }
+  50%, 100%{
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      transform: translate(-60%, -55%);
+  }
+}
+
+@keyframes ArrowOut {
+  0% {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+  90%{
+      top: 0%;
+      left: 100%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+  }
+  100%{
+      top: 200%;
+      left: -100%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+  }
+}
+
+.available-signal{
+   display: inline-block;
+   position: relative;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   background: #8DFF16;
+   margin-right: 10px;
+}
+
+.available-signal::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8DFF16;
+  transform: scale(1);
+  opacity: 1;
+  
+  animation: availableSignal 2s infinite;
+}
+
+@keyframes availableSignal{
+   0%, 30%{
+      transform: scale(1);
+      opacity: 1;
+   }
+   100%{
+      transform: scale(2.5);
+      opacity: 0;
+   }
+}

@@ -1,0 +1,58 @@
+.orb{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 1px solid #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+.small-orb{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.orb-content {
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    pointer-events: none; /* Prevent content interference */
+    font-size: 24px;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    animation: fadeInContent 0.3s forwards;
+}
+
+.orb-content *{
+    pointer-events: none;
+}
+
+@keyframes fadeInContent {
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

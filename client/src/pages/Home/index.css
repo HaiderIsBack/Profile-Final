@@ -1,0 +1,12 @@
+
+
+.mask-paragraph{
+    position: absolute;
+    top: 0;
+    mask-image: url("/mask-circle.svg");
+    background: var(--accent-color);
+    mask-repeat: no-repeat;
+    mask-position: 0%;
+    mask-size: 40px;
+    color: black;
+}
