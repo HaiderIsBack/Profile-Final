@@ -28,8 +28,8 @@
     background: url("/arrow-upward.svg") no-repeat center;
     background-size: contain;
     display: inline-block;
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,7 +38,7 @@
 }
 
 .link-dot-btn:hover > .link-dot .link-dot-arrow{
-    animation: ArrowIn 0.4s forwards;
+    animation: ArrowIn 0.3s forwards;
 }
 
 .link-dot-btn:not(:hover) > .link-dot .link-dot-arrow{

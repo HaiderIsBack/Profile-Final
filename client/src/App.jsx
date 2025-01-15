@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Orb from "./components/Orb";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Footer from "./components/Footer";
-import { useEffect } from "react";
 
 const App = () => {
   
@@ -16,6 +16,7 @@ const App = () => {
           <Nav />
           <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
           </Routes>
           <Footer />
        </Router>

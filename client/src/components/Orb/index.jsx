@@ -312,50 +312,66 @@ const Orb = () => {
   
       const viewElems = document.querySelectorAll(".view-btn");
   
-      viewElems.forEach((viewElem) => {
-        viewElem.addEventListener("mouseover", viewMouseOver);
-        viewElem.addEventListener("mouseout", viewMouseOut);
-      });
+      if(viewElems){
+        viewElems.forEach((viewElem) => {
+          viewElem.addEventListener("mouseover", viewMouseOver);
+          viewElem.addEventListener("mouseout", viewMouseOut);
+        });
+      }
 
       const emailLinks = document.querySelectorAll(".email-link");
 
-      emailLinks.forEach((emailLink) => {
-        emailLink.addEventListener("mouseover", emailMouseOver);
-        emailLink.addEventListener("mouseout", emailMouseOut);
-      });
+      if(emailLinks){
+        emailLinks.forEach((emailLink) => {
+          emailLink.addEventListener("mouseover", emailMouseOver);
+          emailLink.addEventListener("mouseout", emailMouseOut);
+        });
+      }
   
       const hyperLinks = document.querySelectorAll("a, .nav-links");
   
-      hyperLinks.forEach((hyperLink) => {
-        hyperLink.addEventListener("mouseover", hyperLinkMouseOver);
-        hyperLink.addEventListener("mouseout", hyperLinkMouseOut);
-      });
+      if(hyperLinks){
+        hyperLinks.forEach((hyperLink) => {
+          hyperLink.addEventListener("mouseover", hyperLinkMouseOver);
+          hyperLink.addEventListener("mouseout", hyperLinkMouseOut);
+        });
+      }
 
       const maskText = document.querySelector(".mask-text");
 
-      maskText.addEventListener("mouseover", maskTextMouseOver);
-      maskText.addEventListener("mouseout", maskTextMouseOut);
+      if(maskText){
+        maskText.addEventListener("mouseover", maskTextMouseOver);
+        maskText.addEventListener("mouseout", maskTextMouseOut);
+      }
   
       return () => {
         window.removeEventListener("mousemove", orbMovement);
-  
-        viewElems.forEach((viewElem) => {
-          viewElem.removeEventListener("mouseover", viewMouseOver);
-          viewElem.removeEventListener("mouseout", viewMouseOut);
-        });
 
-        emailLinks.forEach((emailLink) => {
-          emailLink.removeEventListener("mouseover", emailMouseOver);
-          emailLink.removeEventListener("mouseout", emailMouseOut);
-        });
-  
-        hyperLinks.forEach((hyperLink) => {
-          hyperLink.removeEventListener("mouseover", hyperLinkMouseOver);
-          hyperLink.removeEventListener("mouseout", hyperLinkMouseOut);
-        });
+        if(viewElems){
+          viewElems.forEach((viewElem) => {
+            viewElem.removeEventListener("mouseover", viewMouseOver);
+            viewElem.removeEventListener("mouseout", viewMouseOut);
+          });
+        }
 
-        maskText.removeEventListener("mouseover", maskTextMouseOver);
-        maskText.removeEventListener("mouseout", maskTextMouseOut);
+        if(emailLinks){
+          emailLinks.forEach((emailLink) => {
+            emailLink.removeEventListener("mouseover", emailMouseOver);
+            emailLink.removeEventListener("mouseout", emailMouseOut);
+          });
+        }
+  
+        if(hyperLinks){
+          hyperLinks.forEach((hyperLink) => {
+            hyperLink.removeEventListener("mouseover", hyperLinkMouseOver);
+            hyperLink.removeEventListener("mouseout", hyperLinkMouseOut);
+          });
+        }
+
+        if(maskText){
+          maskText.removeEventListener("mouseover", maskTextMouseOver);
+          maskText.removeEventListener("mouseout", maskTextMouseOut);
+        }
       };
     }, []);
   

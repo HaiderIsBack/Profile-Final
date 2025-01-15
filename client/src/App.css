@@ -1,4 +1,16 @@
+::selection{
+  background: var(--accent-color);
+  color: #fff;
+}
 
+.dot{
+  display: inline-block;
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background: var(--accent-color);
+  margin: 0 20px;
+}
 
 .link-btn,
 .link-dot-btn{
