@@ -1,8 +1,10 @@
 import "./index.css";
 
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Orb = () => {
+  const location = useLocation();
     useEffect(() => {
       const orbMovement = (e) => {
         const parentOrb = document.querySelector(".orb");
@@ -373,7 +375,7 @@ const Orb = () => {
           maskText.removeEventListener("mouseout", maskTextMouseOut);
         }
       };
-    }, []);
+    }, [location.pathname]);
   
     return (
       <>
