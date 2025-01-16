@@ -1,16 +1,17 @@
+import "./index.css";
 import { DotDownloadLink } from "../../components/DotLink";
 import ScrollingLine from "../../components/ScrollingLine";
 
 const About = () => {
     return (
     <>
-        <div className="container mx-auto relative mb-24">
+        <div className="container mx-auto relative my-24">
             <div className="w-full grid grid-cols-2">
                 <div className="col-span-1">
-                    <h2 className="text-right mr-28 text-[7vw]">Web Developer</h2>
+                    <h2 className="text-center font-['Mango'] text-[10vw]">Web Developer</h2>
                 </div>
                 <div className="col-span-1">
-                    <h2 className="text-left ml-28 text-[7vw]">Network Engineer</h2>
+                    <h2 className="text-center font-['Mango'] text-[10vw]">Network Engineer</h2>
                 </div>
             </div>
             <img src="/web.png" alt="Websites" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[400px]" />
@@ -18,7 +19,7 @@ const About = () => {
 
         <ScrollingLine height="70px" />
 
-        <div className="container mx-auto my-10">
+        <section className="container mx-auto my-10">
             <div className="grid grid-cols-3">
                 <div className="col-span-1 px-10">
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full aspect-square p-2">
@@ -28,8 +29,8 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-2 px-10">
-                    <h6 className="text-[76px] font-['Rajdhani'] leading-[84px]">I craft digital experiences combining <p className="inline-block leading-[84px]">design, motion & development</p></h6>
-                    <p className="my-10 text-[40px] text-[#BDBDBD] font-[sans-serif] leading-[48px]">
+                    <h6 className="text-[76px] font-['Mango'] leading-[84px]">I craft digital experiences combining <p className="inline-block leading-[84px]">design, motion & development</p></h6>
+                    <p className="my-10 text-[55px] text-[#BDBDBD] font-['Mango'] leading-[55px]">
                     My creative journey began 5 years ago when I discovered a passion for everything that could be created through a computer. Curious and driven by the desire to learn and practice, I spent countless hours learning graphic and motion design, as well as web development, through online resources and personal projects. All of this naturally led me to pursue a diploma in Computer Information Technology, where I was able to further develop my skills and knowledge in the field. I am now eager to continue my studies in this field and then quickly apply my skills in a professional setting.
                     </p>
                     <div className="inline-block my-5">
@@ -37,18 +38,18 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div className="container mx-auto">
+        <section className="container mx-auto">
             <div className="flex justify-between gap-5 items-center my-10">
                 <p className="inline-block text-xl">About</p>
                 <div className="w-full h-[1px] bg-gray-700"></div>
             </div>
             <div className="grid grid-cols-3">
                 <div className="col-span-1">
-                    <h2 className="text-[70px]">Talents</h2>
+                    <h2 className="text-[70px] font-['Mango']">Talents</h2>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 pt-5">
                     <div className="grid grid-cols-2">
                         <div className="col-span-1">
                             <h3 className="text-[50px] font-light">Product Design</h3>
@@ -76,18 +77,18 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div className="container mx-auto">
+        <section className="container mx-auto">
             <div className="flex justify-between gap-5 items-center my-10">
                 <p className="inline-block text-xl">About</p>
                 <div className="w-full h-[1px] bg-gray-700"></div>
             </div>
             <div className="grid grid-cols-3">
                 <div className="col-span-1">
-                    <h2 className="text-[70px]">Skills</h2>
+                    <h2 className="text-[70px] font-['Mango']">Skills</h2>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 pt-5">
                     <div className="flex items-center flex-wrap">
                         <h6 className="text-[50px]">HTML</h6> <span className="dot"></span> 
                         <h6 className="text-[50px]">CSS</h6> <span className="dot"></span> 
@@ -107,9 +108,71 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        {/* Experience */}
+        <section className="container mx-auto">
+            <div className="flex justify-between gap-5 items-center my-10">
+                <p className="inline-block text-xl">About</p>
+                <div className="w-full h-[1px] bg-gray-700"></div>
+            </div>
+            <div className="grid grid-cols-3">
+                <div className="col-span-1">
+                    <h2 className="text-[70px] font-['Mango']">Experience</h2>
+                </div>
+                <div className="col-span-2 pt-3">
+                    <div className="my-5">
+                        <h3 className="text-[70px] leading-[55px]">Web Developer</h3>
+                        <p className="text-[30px] text-[#BDBDBD]">@King Solutions</p>
+                        <div className="flex items-center gap-2 text-[24px] text-[#BDBDBD]">
+                            <p>2 February 2024</p>
+                            <span className="right-arrow"></span>
+                            <p>2 August 2024</p>
+                        </div>
+                    </div>
+                    <div className="mt-10">
+                        <h3 className="text-[70px] leading-[55px]">Web Developer</h3>
+                        <p className="text-[30px] text-[#BDBDBD]">@Sigma Engineering Services</p>
+                        <div className="flex items-center gap-2 text-[24px] text-[#BDBDBD]">
+                            <p>2 September 2024</p>
+                            <span className="right-arrow"></span>
+                            <p>Present</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className="container mx-auto mb-52">
+            <div className="flex justify-between gap-5 items-center my-10">
+                <p className="inline-block text-xl">About</p>
+                <div className="w-full h-[1px] bg-gray-700"></div>
+            </div>
+            <div className="grid grid-cols-3">
+                <div className="col-span-1">
+                    <h2 className="text-[70px] font-['Mango']">Certifications</h2>
+                </div>
+                <div className="col-span-2">
+                    <div className="col-span-1 my-5">
+                        <a href="https://simpli-web.app.link/e/ezg4jzcikLb" target="_blank" className="inline-block group">
+                            <h3 className="text-[70px] leading-[55px] group-hover:text-[var(--accent-color)] duration-300">MERN Stack <span className="link-chain"></span></h3>
+                            <p className="text-[30px] text-[#BDBDBD]">@Simplilearn</p>
+                            <div className="flex items-center gap-2 text-[24px] text-[#BDBDBD]">
+                                <p>July 2024</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div className="col-span-1 mt-10">
+                        <a href="https://www.credly.com/badges/5282a9b4-5f8c-46bd-b4a5-b137a971046b/linked_in_profile" target="_blank" className="inline-block group">
+                            <h3 className="text-[70px] leading-[55px] group-hover:text-[var(--accent-color)] duration-300">Python Essentials 1 <span className="link-chain"></span></h3>
+                            <p className="text-[30px] text-[#BDBDBD]">@Cisco</p>
+                            <div className="flex items-center gap-2 text-[24px] text-[#BDBDBD]">
+                                <p>July 2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </>
     );
 }

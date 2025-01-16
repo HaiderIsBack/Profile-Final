@@ -11,6 +11,13 @@
 }
 
 @font-face {
+  font-family: 'Mango'; /* Name of the font */
+  src: url('./assets/MangoGrotesque-Regular.ttf') format('truetype'); /* Path to the .ttf file */
+  font-weight: normal; /* Optional: Specify the weight */
+  font-style: normal;  /* Optional: Specify the style */
+}
+
+@font-face {
   font-family: 'Rajdhani'; /* Name of the font */
   src: url('./assets/Rajdhani/Rajdhani-Regular.ttf') format('truetype'); /* Path to the .ttf file */
   font-weight: normal; /* Optional: Specify the weight */

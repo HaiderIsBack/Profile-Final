@@ -1,0 +1,18 @@
+
+.right-arrow{
+  background: var(--accent-color) no-repeat center;
+  mask: url("../../../public/arrow-right.svg") no-repeat bottom;
+  -webkit-mask: url("../../../public/arrow-right.svg") no-repeat bottom;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.link-chain{
+    background: var(--accent-color) no-repeat center;
+    mask: url("../../../public/link-chain.svg") no-repeat bottom;
+    -webkit-mask: url("../../../public/link-chain.svg") no-repeat bottom;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+}
