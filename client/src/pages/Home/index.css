@@ -1,4 +1,12 @@
 
+#gradient-canvas {
+    width:100%;
+    height:100%;
+    --gradient-color-1: #fb4566; 
+    --gradient-color-2: #fb4566; 
+    --gradient-color-3: #ffa26b;  
+    --gradient-color-4: #ffa26b;
+}
 
 .mask-paragraph{
     position: absolute;

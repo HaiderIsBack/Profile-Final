@@ -3,29 +3,42 @@ import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import DotLink from "../../components/DotLink";
 import ScrollSlider from "../../components/ScrollSlider";
+import { Gradient } from "../../assets/Gradient";
 
 const Home = () => {
     const { scrollYProgress } = useScroll();
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+        const gradient = new Gradient();
+        gradient.initGradient('#gradient-canvas')
+    }, []);
+
     return (
     <>
         <div className="hero">
             <div className="grid grid-cols-12">
-                <motion.div className="col-span-4 relative text-right flex flex-col justify-center pr-5 hover:pr-10 duration-200 select-none" style={{x: leftTrackX}}>
+                <motion.div className="col-span-4 relative text-right flex flex-col justify-center pr-5 duration-200 select-none" style={{x: leftTrackX}}>
                     <h2 className="text-[64px] leading-[58px]">ZULQARNAIN H.</h2>
                     <p className="text-xl">based in Lahore, Pakistan</p>
                     <p className="text-xl"><span className="available-signal"></span> Available for a full-time position</p>
                 </motion.div>
                 <div className="col-span-4 flex justify-center items-center">
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full aspect-square p-2">
-                        <div className="w-full h-full bg-gradient-to-tr from-[var(--accent-color)] to-[var(--accent-secondary-color)] rounded-full">
-                            <img src="/zulqarnain.png" alt="Zulqarnain" className="w-full h-full rounded-full" />
-                        </div>
+                        <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.4, delay: 1, ease: "easeInOut" }}
+                        className="w-full h-full relative">
+                            <canvas id="gradient-canvas" data-transition-in className="rounded-full" />
+                            <img src="/zulqarnain.png" alt="Zulqarnain" className="absolute top-0 left-0 w-full h-full rounded-full" />
+                        </motion.div>
                     </div>
                 </div>
-                <motion.div className="col-span-4 flex flex-col justify-center pl-5 hover:pl-10 duration-200 select-none" style={{ x: rightTrackX }}>
+                <motion.div className="col-span-4 flex flex-col justify-center pl-5 duration-200 select-none" style={{ x: rightTrackX }}>
                     <h2 className="text-[64px] leading-[58px]">Web Developer</h2>
                     <h2 className="text-[64px] leading-[58px]">& Network Engineer</h2>
                 </motion.div>

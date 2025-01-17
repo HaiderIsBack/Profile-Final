@@ -1,18 +1,29 @@
 import "./index.css";
 import { DotDownloadLink } from "../../components/DotLink";
 import ScrollingLine from "../../components/ScrollingLine";
+import { Gradient } from "../../assets/Gradient";
+import { useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const About = () => {
+    const { scrollYProgress } = useScroll();
+    const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -250]);
+    const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 250]);
+
+    useEffect(() => {
+        const gradient = new Gradient();
+        gradient.initGradient("#gradient-canvas");
+    }, []);
     return (
     <>
         <div className="container mx-auto relative my-24">
             <div className="w-full grid grid-cols-2">
-                <div className="col-span-1">
-                    <h2 className="text-center font-['Mango'] text-[10vw]">Web Developer</h2>
-                </div>
-                <div className="col-span-1">
-                    <h2 className="text-center font-['Mango'] text-[10vw]">Network Engineer</h2>
-                </div>
+                <motion.div className="col-span-1" style={{x: leftTrackX}}>
+                    <h2 className="text-center font-['Mango'] pr-5 text-[10vw]">Web Developer</h2>
+                </motion.div>
+                <motion.div className="col-span-1" style={{x: rightTrackX}}>
+                    <h2 className="text-center font-['Mango'] pl-5 text-[10vw]">Network Engineer</h2>
+                </motion.div>
             </div>
             <img src="/web.png" alt="Websites" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[400px]" />
         </div>
@@ -23,8 +34,9 @@ const About = () => {
             <div className="grid grid-cols-3">
                 <div className="col-span-1 px-10">
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full aspect-square p-2">
-                        <div className="w-full h-full bg-gradient-to-tr from-[var(--accent-color)] to-[var(--accent-secondary-color)] rounded-full">
-                            <img src="/zulqarnain.png" alt="Zulqarnain" className="w-full h-full rounded-full" />
+                        <div className="w-full h-full relative">
+                            <canvas id="gradient-canvas" data-transition-in className="rounded-full" />
+                            <img src="/zulqarnain.png" alt="Zulqarnain" className="absolute top-0 left-0 w-full h-full rounded-full" />
                         </div>
                     </div>
                 </div>
