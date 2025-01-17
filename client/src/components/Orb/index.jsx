@@ -376,6 +376,29 @@ const Orb = () => {
         }
       };
     }, [location.pathname]);
+
+    useEffect(() => {
+      const resetOrbs = () => {
+        const parentOrb = document.querySelector(".orb");
+        const childOrb = document.querySelector(".small-orb");
+        
+        parentOrb.animate(
+          {
+            width: "30px",
+            height: "30px",
+          },
+          { duration: 200, fill: "forwards" }
+        );
+        childOrb.animate(
+          {
+            opacity: 1,
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          { duration: 100, fill: "forwards" }
+        );
+      }
+      resetOrbs();
+    }, [location.pathname]);
   
     return (
       <>

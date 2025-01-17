@@ -1,19 +1,23 @@
 import "./index.css";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import DotLink from "../../components/DotLink";
 import ScrollSlider from "../../components/ScrollSlider";
 
 const Home = () => {
+    const { scrollYProgress } = useScroll();
+    const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -200]);
+    const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
     return (
     <>
         <div className="hero">
             <div className="grid grid-cols-12">
-                <div className="col-span-4 relative text-right flex flex-col justify-center duration-200">
+                <motion.div className="col-span-4 relative text-right flex flex-col justify-center pr-5 hover:pr-10 duration-200 select-none" style={{x: leftTrackX}}>
                     <h2 className="text-[64px] leading-[58px]">ZULQARNAIN H.</h2>
                     <p className="text-xl">based in Lahore, Pakistan</p>
                     <p className="text-xl"><span className="available-signal"></span> Available for a full-time position</p>
-                </div>
+                </motion.div>
                 <div className="col-span-4 flex justify-center items-center">
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full aspect-square p-2">
                         <div className="w-full h-full bg-gradient-to-tr from-[var(--accent-color)] to-[var(--accent-secondary-color)] rounded-full">
@@ -21,10 +25,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-4 flex flex-col justify-center pl-5 pr-5 hover:pl-10 duration-200">
+                <motion.div className="col-span-4 flex flex-col justify-center pl-5 hover:pl-10 duration-200 select-none" style={{ x: rightTrackX }}>
                     <h2 className="text-[64px] leading-[58px]">Web Developer</h2>
                     <h2 className="text-[64px] leading-[58px]">& Network Engineer</h2>
-                </div>
+                </motion.div>
             </div>
         </div>
         

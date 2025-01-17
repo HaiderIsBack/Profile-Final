@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./index.css";
 import { Link, useLocation } from 'react-router-dom';
 
@@ -8,9 +9,10 @@ const Nav = () => {
 
     useEffect(() => {
         setCurrentRoute(location.pathname);
+        window.scrollTo(0, 0);
     }, [location.pathname]);
     return (
-        <header className="navbar container mx-auto">
+        <motion.header className="navbar relative container mx-auto">
             <div className="logo">
                 <Link to="/" className="link-btn">
                     <h1 className="link-text">
@@ -51,7 +53,7 @@ const Nav = () => {
                     </li>
                 </menu>
             </nav>
-        </header>
+        </motion.header>
     )
 }
 
