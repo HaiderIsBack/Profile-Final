@@ -1,7 +1,14 @@
+import { useEffect, useState } from "react";
 import "./index.css";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Nav = () => {
+    const [currentRoute, setCurrentRoute] = useState("/");
+    const location = useLocation();
+
+    useEffect(() => {
+        setCurrentRoute(location.pathname);
+    }, [location.pathname]);
     return (
         <header className="navbar container mx-auto">
             <div className="logo">
@@ -16,7 +23,7 @@ const Nav = () => {
             <nav>
                 <menu>
                     <li>
-                        <Link to="/" className="link-btn nav-links active">
+                        <Link to="/" className={`link-btn nav-links ${currentRoute === "/" ? "active" : ""}`}>
                             <p className="link-text">
                                 <span className="hidden-text">Home</span>
                                 <span className="text-1">Home</span>
@@ -25,7 +32,7 @@ const Nav = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/projects" className="link-btn nav-links">
+                        <Link to="/projects" className={`link-btn nav-links ${currentRoute === "/projects" ? "active" : ""}`}>
                             <p className="link-text">
                                 <span className="hidden-text">Projects</span>
                                 <span className="text-1">Projects</span>
@@ -34,7 +41,7 @@ const Nav = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" className="link-btn nav-links">
+                        <Link to="/about" className={`link-btn nav-links ${currentRoute === "/about" ? "active" : ""}`}>
                             <p className="link-text">
                                 <span className="hidden-text">About</span>
                                 <span className="text-1">About</span>

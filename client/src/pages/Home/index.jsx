@@ -9,7 +9,7 @@ const Home = () => {
     <>
         <div className="hero">
             <div className="grid grid-cols-12">
-                <div className="col-span-4 text-right flex flex-col justify-center pl-5 pr-5 hover:pr-10 duration-200">
+                <div className="col-span-4 relative text-right flex flex-col justify-center duration-200">
                     <h2 className="text-[64px] leading-[58px]">ZULQARNAIN H.</h2>
                     <p className="text-xl">based in Lahore, Pakistan</p>
                     <p className="text-xl"><span className="available-signal"></span> Available for a full-time position</p>

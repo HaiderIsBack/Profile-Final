@@ -24,7 +24,7 @@ const ScrollSlider = ({ text, imgSrc, offset, direction }) => {
 
 const ScrollSlide = ({ text }) => {
     return (
-        <p className="flex items-center text-[96px] gap-16 pr-16">
+        <p className="flex items-center text-[126px] font-['Mango'] gap-16 pr-16">
             {text} <span className="scroll-slider-dot"></span>
         </p>
     )

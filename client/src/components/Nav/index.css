@@ -41,14 +41,42 @@
     position: relative;
 }
 
-.nav-links.active::before{
+.nav-links::before{
     content: '';
     position: absolute;
-    top: 115%;
+    top: 135%;
     left: 50%;
     transform: translateX(-50%);
     width: 5px;
     height: 5px;
     border-radius: 50%;
+    opacity: 0;
     background: var(--accent-color);
+    animation: dotSlideDown 0.3s forwards;
+}
+
+.nav-links.active::before{
+    animation: dotSlideUp 0.3s forwards;
+}
+
+@keyframes dotSlideUp{
+    from{
+        top: 200%;
+        opacity: 0;
+    }
+    to{
+        top: 115%;
+        opacity: 1;
+    }
+}
+
+@keyframes dotSlideDown{
+    from{
+        top: 115%;
+        opacity: 1;
+    }
+    to{
+        top: 200%;
+        opacity: 0;
+    }
 }
