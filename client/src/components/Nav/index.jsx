@@ -12,7 +12,11 @@ const Nav = () => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
     return (
-        <motion.header className="navbar relative container mx-auto">
+        <motion.header className="navbar relative container mx-auto"
+            initial={{y: "-100%"}}
+            animate={{y: 0}}
+            transition={{duration: 1, delay: 1, ease: "backOut"}}
+            >
             <div className="logo">
                 <Link to="/" className="link-btn">
                     <h1 className="link-text">

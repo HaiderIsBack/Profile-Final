@@ -48,10 +48,12 @@
 
 html, body{
   font-family: 'Roboto', sans-serif;
+  line-height: 0.9;
   background-color: #111;
   color: #fff;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
