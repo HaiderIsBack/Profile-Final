@@ -9,28 +9,28 @@
 
 @font-face {
   font-family: 'Mango'; /* Name of the font */
-  src: url('./assets/MangoGrotesque-Regular.ttf') format('truetype'); /* Path to the .ttf file */
+  src: url('/fonts/MangoGrotesque-Regular.ttf') format('truetype'); /* Path to the .ttf file */
   font-weight: normal; /* Optional: Specify the weight */
   font-style: normal;  /* Optional: Specify the style */
 }
 
 @font-face {
   font-family: 'Rajdhani'; /* Name of the font */
-  src: url('./assets/Rajdhani/Rajdhani-Regular.ttf') format('truetype'); /* Path to the .ttf file */
+  src: url('/fonts/Rajdhani/Rajdhani-Regular.ttf') format('truetype'); /* Path to the .ttf file */
   font-weight: normal; /* Optional: Specify the weight */
   font-style: normal;  /* Optional: Specify the style */
 }
 
 @font-face {
   font-family: 'Rajdhani'; /* Name of the font */
-  src: url('./assets/Rajdhani/Rajdhani-SemiBold.ttf') format('truetype'); /* Path to the .ttf file */
+  src: url('/fonts/Rajdhani/Rajdhani-SemiBold.ttf') format('truetype'); /* Path to the .ttf file */
   font-weight: 600; /* Optional: Specify the weight */
   font-style: normal;  /* Optional: Specify the style */
 }
 
 @font-face {
   font-family: 'Rajdhani'; /* Name of the font */
-  src: url('./assets/Rajdhani/Rajdhani-Bold.ttf') format('truetype'); /* Path to the .ttf file */
+  src: url('/fonts/Rajdhani/Rajdhani-Bold.ttf') format('truetype'); /* Path to the .ttf file */
   font-weight: 700; /* Optional: Specify the weight */
   font-style: normal;  /* Optional: Specify the style */
 }
