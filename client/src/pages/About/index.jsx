@@ -25,7 +25,7 @@ const About = () => {
                     <h2 className="text-center font-['Mango'] pl-5 text-[10vw]">Network Engineer</h2>
                 </motion.div>
             </div>
-            <img src="/web.png" alt="Websites" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[400px]" />
+            <img src="/web.png" alt="Websites" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[400px]" loading="lazy" />
         </div>
 
         <ScrollingLine height="70px" />
@@ -36,7 +36,7 @@ const About = () => {
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full aspect-square p-2">
                         <div className="w-full h-full relative">
                             <canvas id="gradient-canvas" data-transition-in className="rounded-full" />
-                            <img src="/zulqarnain.png" alt="Zulqarnain" className="absolute top-0 left-0 w-full h-full rounded-full" />
+                            <img src="/zulqarnain.png" alt="Zulqarnain" className="absolute top-0 left-0 w-full h-full rounded-full" loading="lazy" />
                         </div>
                     </div>
                 </div>
