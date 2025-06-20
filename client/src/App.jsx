@@ -4,26 +4,27 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Orb from "./components/Orb";
 import Nav from "./components/Nav";
+import PageTransition from "./components/PageTransition";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 
 const About = lazy(() => import("./pages/About"));
 
-import Footer from "./components/Footer";
-
 const App = () => {
   
   return (
-    <div>
+    <main>
        <Router>
           <Orb />
           <Nav />
           <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+              <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           </Routes>
           <Footer />
        </Router>
-    </div>
+    </main>
   );
 }
 

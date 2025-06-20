@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const RevealUp = ({ children, lineHeight }) => {
+export const RevealUp = ({ children, lineHeight = 'auto', fontFamily = 'inherit' }) => {
     const text = React.Children.toArray(children).join("");
     const words = text.split(" ");
     return (
@@ -12,6 +12,7 @@ export const RevealUp = ({ children, lineHeight }) => {
                     whileInView={{ y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9, ease: [0.83, 0, 0.17, 1] }}
+                    style={{ fontFamily }}
                 >
                     {word}
                 </motion.span>
@@ -56,4 +57,26 @@ export const RevealUpFromRight = ({ children }) => {
             }
         </div>
     );
+}
+
+export const LineSlideLeft = () => {
+    return (
+        <motion.div 
+            className="w-full h-[1px] bg-gray-700 relative"
+            initial={{ scaleX: 0, left: "100%", opacity: 0 }}
+            whileInView={{ scaleX: "100%", left: "0%", opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.83, 0, 0.17, 1] }}></motion.div>
+    )
+}
+
+export const LineSlideRight = () => {
+    return (
+        <motion.div 
+            className="h-[1px] bg-gray-700"
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.83, 0, 0.17, 1] }}></motion.div>
+    )
 }

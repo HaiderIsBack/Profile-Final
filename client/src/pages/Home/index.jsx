@@ -4,7 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import DotLink from "../../components/DotLink";
 import ScrollSlider from "../../components/ScrollSlider";
 import { Gradient } from "../../assets/Gradient";
-import { RevealUp, RevealUpFromLeft } from "../../components/Animations/Text";
+import { RevealUp, LineSlideLeft, LineSlideRight } from "../../components/Animations/Text";
+
 
 const Home = () => {
     const { scrollYProgress } = useScroll();
@@ -53,13 +54,13 @@ const Home = () => {
 
         <div className="w-full grid grid-cols-12 align-middle">
             <div className="col-span-4 px-10">
-                <div className="w-full h-[1px] bg-gray-700"></div>                    
+                <LineSlideLeft />                
             </div>
             <div className="col-span-4 flex justify-center items-center">
                 <h2 className="text-[49px] leading-10 mt-[-1rem]"><RevealUp lineHeight={"40px"}>Discover my creative expertise</RevealUp></h2>
             </div>
             <div className="col-span-4 px-10">
-                <div className="w-full h-[1px] bg-gray-700"></div>
+                <LineSlideRight />
             </div>
         </div>
         <h5 className="text-center font-['Rajdhani'] text-[16px]">Checkout some of my projects by area of expertise</h5>
@@ -69,25 +70,25 @@ const Home = () => {
             </div>
             <div className="w-full grid grid-cols-12">
                 <div className="col-span-5 px-10">
-                    <div className="w-full h-[1px] bg-gray-700"></div>                    
+                    <LineSlideLeft />                    
                 </div>
                 <div className="col-span-2 flex justify-center">
                     <h2 className="text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
                 </div>
                 <div className="col-span-5 px-10">
-                    <div className="w-full h-[1px] bg-gray-700"></div>
+                    <LineSlideRight />
                 </div>
             </div>
             <ScrollSlider text={"Network Administration"} imgSrc={"/router.png"} offset="-40%" direction={"right"} />
             <div className="w-full grid grid-cols-12">
                 <div className="col-span-5 px-10">
-                    <div className="w-full h-[1px] bg-gray-700"></div>                    
+                    <LineSlideLeft />                    
                 </div>
                 <div className="col-span-2 flex justify-center">
                     <h2 className="text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
                 </div>
                 <div className="col-span-5 px-10">
-                    <div className="w-full h-[1px] bg-gray-700"></div>
+                    <LineSlideRight />
                 </div>
             </div>
             <ScrollSlider text={"Game Development"} imgSrc={"/controller2.png"} offset="-20%" direction={"left"} />
@@ -118,7 +119,7 @@ const MaskedTextSection = () => {
     }, []);
     return (
         <div className="mask-text relative overflow-visible" id="mask-container">
-            <p className="text-[64px] leading-[58px] pt-52 pb-52 px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple perspectives.</RevealUp></p>
+            <p className="text-[64px] leading-[58px] pt-52 pb-52 px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple</RevealUp> <RevealUp>perspectives.</RevealUp></p>
             <motion.div className="text-[40px] leading-[80px] mask-paragraph pt-52 pb-52 px-10"
             animate={{
                 WebkitMaskPosition: `${mousePos.x - size / 2}px ${mousePos.y - size / 2}px`,
@@ -139,5 +140,7 @@ const MaskedTextSection = () => {
         </div>
     );
 }
+
+
 
 export default Home;
