@@ -137,8 +137,8 @@ const About = () => {
                 <div className="col-span-3 xl:col-span-2 pt-3">
                     <div className="mb-5">
                         <h3 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Web Developer</h3>
-                        <p className="text-[30px] text-[#BDBDBD] mb-1">@King Solutions</p>
-                        <div className="flex items-center gap-2 text-[20px] text-[#BDBDBD]">
+                        <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@King Solutions</p>
+                        <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>2 February 2024</p>
                             <span className="right-arrow"></span>
                             <p>2 August 2024</p>
@@ -146,8 +146,8 @@ const About = () => {
                     </div>
                     <div className="mt-10">
                         <h3 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Web Developer</h3>
-                        <p className="text-[30px] text-[#BDBDBD] mb-1">@Sigma Engineering Services</p>
-                        <div className="flex items-center gap-2 text-[20px] text-[#BDBDBD]">
+                        <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@Sigma Engineering Services</p>
+                        <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>2 September 2024</p>
                             <span className="right-arrow"></span>
                             <p>30 April 2025</p>
@@ -155,8 +155,8 @@ const About = () => {
                     </div>
                     <div className="mt-10">
                         <h3 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Wordpress Developer</h3>
-                        <p className="text-[30px] text-[#BDBDBD] mb-1">@AMG Advertising - {"[Remote]"}</p>
-                        <div className="flex items-center gap-2 text-[20px] text-[#BDBDBD]">
+                        <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@AMG Advertising - {"[Remote]"}</p>
+                        <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>7 May 2025</p>
                             <span className="right-arrow"></span>
                             <p>Present</p>
@@ -164,8 +164,8 @@ const About = () => {
                     </div>
                     <div className="mt-10">
                         <h3 className="text-5xl xl:text-[70px] leading-[48px] xl:leading-[55px] mb-2">NextJs Developer & Animator</h3>
-                        <p className="text-[30px] text-[#BDBDBD] mb-1">@CodeNativeX - {"[Remote]"}</p>
-                        <div className="flex items-center gap-2 text-[20px] text-[#BDBDBD]">
+                        <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@CodeNativeX - {"[Remote]"}</p>
+                        <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>28 May 2025</p>
                             <span className="right-arrow"></span>
                             <p>Present</p>
@@ -188,8 +188,8 @@ const About = () => {
                     <div className="col-span-1 mb-5">
                         <a href="https://simpli-web.app.link/e/ezg4jzcikLb" target="_blank" className="inline-block group">
                             <h3 className="text-5xl xl:text-[70px] leading-[55px] group-hover:text-[var(--accent-color)] xl:block flex items-center duration-300 mb-2">MERN Stack <span className="link-chain"></span></h3>
-                            <p className="text-[30px] text-[#BDBDBD] mb-1">@Simplilearn</p>
-                            <div className="flex items-center gap-2 text-[20px] text-[#BDBDBD]">
+                            <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@Simplilearn</p>
+                            <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                                 <p>July 2024</p>
                             </div>
                         </a>
@@ -197,8 +197,8 @@ const About = () => {
                     <div className="col-span-1 mt-10">
                         <a href="https://www.credly.com/badges/5282a9b4-5f8c-46bd-b4a5-b137a971046b/linked_in_profile" target="_blank" className="inline-block group">
                             <h3 className="text-5xl xl:text-[70px] leading-[55px] group-hover:text-[var(--accent-color)]  xl:block flex items-center duration-300 mb-2">Python Essentials 1 <span className="link-chain"></span></h3>
-                            <p className="text-[30px] text-[#BDBDBD] mb-1">@Cisco</p>
-                            <div className="flex items-center gap-2 text-[20px] text-[#BDBDBD]">
+                            <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@Cisco</p>
+                            <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                                 <p>July 2024</p>
                             </div>
                         </a>
