@@ -5,9 +5,11 @@ import DotLink from "../../components/DotLink";
 import ScrollSlider from "../../components/ScrollSlider";
 import { Gradient } from "../../assets/Gradient";
 import { RevealUp, LineSlideLeft, LineSlideRight } from "../../components/Animations/Text";
+import useScreenSize from "../../hooks/useScreenSize";
 
 
 const Home = () => {
+    const screenSize = useScreenSize();
     const { scrollYProgress } = useScroll();
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 200]);
@@ -23,7 +25,7 @@ const Home = () => {
     <>
         <div className="hero">
             <div className="grid grid-cols-12 gap-5 xl:gap-0">
-                <motion.div className="col-span-12 xl:col-span-4 relative text-center xl:text-right flex flex-col justify-center pr-5 duration-200 select-none" style={{x: leftTrackX}}>
+                <motion.div className="col-span-12 xl:col-span-4 relative text-center xl:text-right flex flex-col justify-center pr-0 xl:pr-5 duration-200 select-none" style={{x: leftTrackX}}>
                     <h2 className="text-5xl xl:text-[64px] leading-[58px] -mb-[1.3rem] xl:-mb-[1rem]"><RevealUp lineHeight={"45px"}>ZULQARNAIN H.</RevealUp></h2>
                     <p className="text-md xl:text-xl"><RevealUp lineHeight={"25px"}>based in Lahore, Pakistan</RevealUp></p>
                     <p className="text-md xl:text-xl flex justify-center xl:justify-end items-baseline -mt-[10px] xl:-mt-[1rem]"><span className="available-signal"></span> <RevealUp lineHeight={"25px"}>Available for a full-time position</RevealUp></p>
@@ -41,8 +43,8 @@ const Home = () => {
                     </div>
                 </div>
                 <motion.div className="col-span-12 xl:col-span-4 flex flex-col justify-center pl-5 duration-200 select-none text-center xl:text-left" style={{ x: rightTrackX }}>
-                    <h2 className="text-[64px] leading-[58px]"><RevealUp lineHeight={"58px"}>Web Developer</RevealUp></h2>
-                    <h2 className="text-[64px] leading-[58px] mt-[-1rem]"><RevealUp lineHeight={"58px"}>& Network Engineer</RevealUp></h2>
+                    <h2 className="text-5xl xl:text-[64px] leading-[58px]"><RevealUp lineHeight={"58px"}>Web Developer</RevealUp></h2>
+                    <h2 className="text-5xl xl:text-[64px] leading-[58px] mt-[-1rem]"><RevealUp lineHeight={"58px"}>& Network Engineer</RevealUp></h2>
                 </motion.div>
             </div>
         </div>
@@ -53,41 +55,41 @@ const Home = () => {
         </div>
 
         <div className="w-full grid grid-cols-12 align-middle">
-            <div className="col-span-4 px-10">
+            <div className="col-span-3 xl:col-span-4 px-5 xl:px-10">
                 <LineSlideLeft />                
             </div>
-            <div className="col-span-4 flex justify-center items-center">
-                <h2 className="text-[49px] leading-10 mt-[-1rem]"><RevealUp lineHeight={"40px"}>Discover my creative expertise</RevealUp></h2>
+            <div className="col-span-6 xl:col-span-4 flex justify-center items-center">
+                <h2 className="text-lg xl:text-[49px] leading-5 xl:leading-10 -mt-[0.5rem] xl:mt-[-1rem]"><RevealUp lineHeight={"40px"}>Discover my creative expertise</RevealUp></h2>
             </div>
-            <div className="col-span-4 px-10">
+            <div className="col-span-3 xl:col-span-4 px-5 xl:px-10">
                 <LineSlideRight />
             </div>
         </div>
-        <h5 className="text-center font-['Rajdhani'] text-[16px]">Checkout some of my projects by area of expertise</h5>
+        <h5 className="text-center font-['Rajdhani'] text-sm xl:text-[16px]">Checkout some of my projects by area of expertise</h5>
         <div className="scroll-slider-container">
             <div className="">
                 <ScrollSlider text={"Web Development"} imgSrc={"/web.png"} offset="-30%" direction={"left"} />
             </div>
             <div className="w-full grid grid-cols-12">
-                <div className="col-span-5 px-10">
+                <div className="col-span-4 xl:col-span-5 px-5 xl:px-10">
                     <LineSlideLeft />                    
                 </div>
-                <div className="col-span-2 flex justify-center">
-                    <h2 className="text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
+                <div className="col-span-4 xl:col-span-2 flex justify-center">
+                    <h2 className="text-sm xl:text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
                 </div>
-                <div className="col-span-5 px-10">
+                <div className="col-span-4 xl:col-span-5 px-5 xl:px-10">
                     <LineSlideRight />
                 </div>
             </div>
             <ScrollSlider text={"Network Administration"} imgSrc={"/router.png"} offset="-40%" direction={"right"} />
             <div className="w-full grid grid-cols-12">
-                <div className="col-span-5 px-10">
+                <div className="col-span-4 xl:col-span-5 px-5 xl:px-10">
                     <LineSlideLeft />                    
                 </div>
-                <div className="col-span-2 flex justify-center">
-                    <h2 className="text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
+                <div className="col-span-4 xl:col-span-2 flex justify-center">
+                    <h2 className="text-sm xl:text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
                 </div>
-                <div className="col-span-5 px-10">
+                <div className="col-span-4 xl:col-span-5 px-5 xl:px-10">
                     <LineSlideRight />
                 </div>
             </div>
@@ -119,8 +121,8 @@ const MaskedTextSection = () => {
     }, []);
     return (
         <div className="mask-text relative overflow-visible" id="mask-container">
-            <p className="text-[64px] leading-[58px] pt-52 pb-52 px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple</RevealUp> <RevealUp>perspectives.</RevealUp></p>
-            <motion.div className="text-[40px] leading-[80px] mask-paragraph pt-52 pb-52 px-10"
+            <p className="text-xl xl:text-[64px] leading-[58px] pt-52 pb-52 px-5 xl:px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple</RevealUp> <RevealUp>perspectives.</RevealUp></p>
+            <motion.div className="text-4xl xl:text-[40px] leading-[80px] mask-paragraph pt-52 pb-52 px-10"
             animate={{
                 WebkitMaskPosition: `${mousePos.x - size / 2}px ${mousePos.y - size / 2}px`,
                 WebkitMaskSize: `${size}px`

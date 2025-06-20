@@ -1,15 +1,19 @@
 import "./index.css";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const ScrollSlider = ({ text, imgSrc, offset, direction }) => {
+    const screenSize = useScreenSize();
     const scrollSliderRef = useRef(null);
     const dir = direction === "left" ? -1 : 1;
     const { scrollYProgress } = useScroll({
         target: scrollSliderRef,
         offset: ['start end', 'end start'],
     });
-    const x = useTransform(scrollYProgress, [0, 1], [-150 * dir, 150 * dir]);
+    const maxLeft = screenSize.width < 768 ? -250 : -150;
+    const maxRight = screenSize.width < 768 ? 250 : 150;
+    const x = useTransform(scrollYProgress, [0, 1], [maxLeft * dir, maxRight * dir]);
     return (
         <div className="relative scroll-slider view-btn overflow-hidden cursor-pointer py-24" ref={scrollSliderRef}>
             <motion.div className="relative flex whitespace-nowrap pointer-events-none" style={{left: offset, x}} transition={{ease: "easeInOut"}}>
@@ -24,7 +28,7 @@ const ScrollSlider = ({ text, imgSrc, offset, direction }) => {
 
 const ScrollSlide = ({ text }) => {
     return (
-        <p className="flex items-center text-[126px] font-['Mango'] gap-16 pr-16">
+        <p className="flex items-center text-[84px] xl:text-[126px] font-['Mango'] gap-16 pr-16">
             {text} <span className="scroll-slider-dot"></span>
         </p>
     )
