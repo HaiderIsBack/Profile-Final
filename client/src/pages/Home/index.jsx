@@ -44,7 +44,7 @@ const Home = () => {
                 </div>
                 <motion.div className="col-span-12 xl:col-span-4 flex flex-col justify-center pl-5 duration-200 select-none text-center xl:text-left" style={{ x: rightTrackX }}>
                     <h2 className="text-5xl xl:text-[64px] leading-[58px]"><RevealUp lineHeight={"58px"}>Web Developer</RevealUp></h2>
-                    <h2 className="text-5xl xl:text-[64px] leading-[58px] mt-[-1rem]"><RevealUp lineHeight={"58px"}>& Network Engineer</RevealUp></h2>
+                    <h2 className="text-5xl xl:text-[64px] leading-[58px] -mt-[1.8rem] xl:mt-[-1rem]"><RevealUp lineHeight={"58px"}>& Network Engineer</RevealUp></h2>
                 </motion.div>
             </div>
         </div>
@@ -121,8 +121,8 @@ const MaskedTextSection = () => {
     }, []);
     return (
         <div className="mask-text relative overflow-visible" id="mask-container">
-            <p className="text-xl xl:text-[64px] leading-[58px] pt-52 pb-52 px-5 xl:px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple</RevealUp> <RevealUp>perspectives.</RevealUp></p>
-            <motion.div className="text-4xl xl:text-[40px] leading-[80px] mask-paragraph pt-52 pb-52 px-10"
+            <p className="text-xl xl:text-[64px] leading-5 xl:leading-[58px] pt-24 xl:pt-52 pb-24 xl:pb-52 px-5 xl:px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple</RevealUp> <RevealUp>perspectives.</RevealUp></p>
+            <motion.div className="text-4xl xl:text-[40px] hidden xl:block leading-[80px] mask-paragraph pt-24 xl:pt-52 pb-24 xl:pb-52 px-10"
             animate={{
                 WebkitMaskPosition: `${mousePos.x - size / 2}px ${mousePos.y - size / 2}px`,
                 WebkitMaskSize: `${size}px`
