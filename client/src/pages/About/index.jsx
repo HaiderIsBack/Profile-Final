@@ -56,7 +56,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-span-3 xl:col-span-2 px-5 xl:px-10 mt-5 xl:mt-0">
-                    <h6 className="text-5xl xl:text-[76px] font-['Mango'] xl:leading-[74px]"><RevealUp fontFamily="Mango" lineHeight={screenSize.width < 1280 ? "48px" : "74px"}>I  craft  digital  experiences  combining</RevealUp> <p className="inline-block xl:leading-[64px]"><RevealUp lineHeight={screenSize.width < 1280 ? "48px" : "64px"}>design, motion & development</RevealUp></p></h6>
+                    <h3 className="text-5xl xl:text-[76px] font-['Mango'] xl:leading-[74px]"><RevealUp fontFamily="Mango" lineHeight={screenSize.width < 1280 ? "48px" : "74px"}>I  craft  digital  experiences  combining</RevealUp> <p className="inline-block xl:leading-[64px]"><RevealUp lineHeight={screenSize.width < 1280 ? "48px" : "64px"}>design, motion & development</RevealUp></p></h3>
                     <p className="my-10 text-5xl xl:text-[55px] text-[#BDBDBD] font-['Mango'] leading-[55px]">
                     My creative journey began 5 years ago when I discovered a passion for everything that could be created through a computer. Curious and driven by the desire to learn and practice, I spent countless hours learning graphic and motion design, as well as web development, through online resources and personal projects. All of this naturally led me to pursue a diploma in Computer Information Technology, where I was able to further develop my skills and knowledge in the field. I am now eager to continue my studies in this field and then quickly apply my skills in a professional setting.
                     </p>
@@ -74,19 +74,19 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3 gap-y-5 xl:gap-y-0">
                 <div className="col-span-3 xl:col-span-1">
-                    <h2 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Talents</RevealUp></h2>
+                    <h4 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Talents</RevealUp></h4>
                 </div>
                 <div className="col-span-3 xl:col-span-2">
                     <div className="grid grid-cols-2">
                         <div className="col-span-2 xl:col-span-1">
-                            <h3 className="text-[50px] font-light mb-2"><RevealUp>Product Design</RevealUp></h3>
+                            <h5 className="text-[50px] font-light mb-2"><RevealUp>Product Design</RevealUp></h5>
                             <div className="flex flex-col mb-10">
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>UI/UX Design</RevealUp></p>
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>Prototyping</RevealUp></p>
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>System Design</RevealUp></p>
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>Execution</RevealUp></p>
                             </div>
-                            <h3 className="text-[50px] font-light mb-2"><RevealUp>Web Development</RevealUp></h3>
+                            <h5 className="text-[50px] font-light mb-2"><RevealUp>Web Development</RevealUp></h5>
                             <div className="flex flex-col mb-10 xl:mb-0">
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>Frontend Development</RevealUp></p>
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>Backend Development</RevealUp></p>
@@ -95,7 +95,7 @@ const About = () => {
                             </div>
                         </div>
                         <div className="col-span-2 xl:col-span-1">
-                        <h3 className="text-[50px] font-light mb-2"><RevealUp>Network Design</RevealUp></h3>
+                        <h5 className="text-[50px] font-light mb-2"><RevealUp>Network Design</RevealUp></h5>
                             <div className="flex flex-col">
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>Topology Prototyping</RevealUp></p>
                                 <p className="text-2xl text-[#BDBDBD] leading-[25px]"><RevealUp lineHeight={"25px"}>Routing and Switching</RevealUp></p>
@@ -113,25 +113,25 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3 gap-y-5 xl:gap-y-0">
                 <div className="col-span-3 xl:col-span-1">
-                    <h2 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Skills</RevealUp></h2>
+                    <h4 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Skills</RevealUp></h4>
                 </div>
                 <div className="col-span-3 xl:col-span-2">
                     <div className="flex items-center flex-wrap gap-y-0 xl:gap-y-5">
-                        <h6 className="text-4xl xl:text-[50px]">HTML</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">CSS</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">JavaScript</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">Java</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">ReactJs</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">NodeJs</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">ExpressJs</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">TailwindCSS</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">C/C++</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">Python</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">GSAP</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">Framer Motion</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">WordPress</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">CCNA/CCNP</h6> <span className="dot"></span> 
-                        <h6 className="text-4xl xl:text-[50px]">Cisco/Huawei Routing & Switching</h6>
+                        <h5 className="text-4xl xl:text-[50px]">HTML</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">CSS</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">JavaScript</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">Java</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">ReactJs</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">NodeJs</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">ExpressJs</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">TailwindCSS</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">C/C++</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">Python</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">GSAP</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">Framer Motion</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">WordPress</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">CCNA/CCNP</h5> <span className="dot"></span> 
+                        <h5 className="text-4xl xl:text-[50px]">Cisco/Huawei Routing & Switching</h5>
                     </div>
                 </div>
             </div>
@@ -144,11 +144,11 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3 gap-y-5 xl:gap-y-0">
                 <div className="col-span-3 xl:col-span-1">
-                    <h2 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Experience</RevealUp></h2>
+                    <h4 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Experience</RevealUp></h4>
                 </div>
                 <div className="col-span-3 xl:col-span-2 pt-3">
                     <div className="mb-5">
-                        <h3 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Web Developer</h3>
+                        <h5 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Web Developer</h5>
                         <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@King Solutions</p>
                         <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>2 February 2024</p>
@@ -157,7 +157,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="mt-10">
-                        <h3 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Web Developer</h3>
+                        <h5 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Web Developer</h5>
                         <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@Sigma Engineering Services</p>
                         <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>2 September 2024</p>
@@ -166,7 +166,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="mt-10">
-                        <h3 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Wordpress Developer</h3>
+                        <h5 className="text-5xl xl:text-[70px] leading-[55px] mb-2">Wordpress Developer</h5>
                         <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@AMG Advertising - {"[Remote]"}</p>
                         <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>7 May 2025</p>
@@ -175,7 +175,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="mt-10">
-                        <h3 className="text-5xl xl:text-[70px] leading-[48px] xl:leading-[55px] mb-2">NextJs Developer & Animator</h3>
+                        <h5 className="text-5xl xl:text-[70px] leading-[48px] xl:leading-[55px] mb-2">NextJs Developer & Animator</h5>
                         <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@CodeNativeX - {"[Remote]"}</p>
                         <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                             <p>28 May 2025</p>
@@ -194,12 +194,12 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3 gap-y-5 xl:gap-y-0">
                 <div className="col-span-3 xl:col-span-1">
-                    <h2 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Certifications</RevealUp></h2>
+                    <h4 className="text-5xl xl:text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Certifications</RevealUp></h4>
                 </div>
                 <div className="col-span-3 xl:col-span-2">
                     <div className="col-span-1 mb-5">
                         <a href="https://simpli-web.app.link/e/ezg4jzcikLb" target="_blank" className="inline-block group">
-                            <h3 className="text-5xl xl:text-[70px] leading-[55px] group-hover:text-[var(--accent-color)] xl:block flex items-center duration-300 mb-2">MERN Stack <span className="link-chain"></span></h3>
+                            <h5 className="text-5xl xl:text-[70px] leading-[55px] group-hover:text-[var(--accent-color)] xl:block flex items-center duration-300 mb-2">MERN Stack <span className="link-chain"></span></h5>
                             <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@Simplilearn</p>
                             <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                                 <p>July 2024</p>
@@ -208,7 +208,7 @@ const About = () => {
                     </div>
                     <div className="col-span-1 mt-10">
                         <a href="https://www.credly.com/badges/5282a9b4-5f8c-46bd-b4a5-b137a971046b/linked_in_profile" target="_blank" className="inline-block group">
-                            <h3 className="text-5xl xl:text-[70px] leading-[55px] group-hover:text-[var(--accent-color)]  xl:block flex items-center duration-300 mb-2">Python Essentials 1 <span className="link-chain"></span></h3>
+                            <h5 className="text-5xl xl:text-[70px] leading-[55px] group-hover:text-[var(--accent-color)]  xl:block flex items-center duration-300 mb-2">Python Essentials 1 <span className="link-chain"></span></h5>
                             <p className="text-2xl xl:text-[30px] text-[#BDBDBD] mb-0 xl:mb-1">@Cisco</p>
                             <div className="flex items-center gap-2 text-lg xl:text-[20px] text-[#BDBDBD]">
                                 <p>July 2024</p>
