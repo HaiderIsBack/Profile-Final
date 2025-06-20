@@ -83,6 +83,9 @@
 
 /* Mobile */
 @media (max-width: 768px){
+    .navbar{
+        padding: 40px 20px;
+    }
     .navbar nav menu{
         gap: 5px;
     }

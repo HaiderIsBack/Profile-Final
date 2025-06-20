@@ -35,7 +35,7 @@ const About = () => {
 
         <section className="container mx-auto my-10">
             <div className="grid grid-cols-3 gap-y-5 xl:gap-y-0">
-                <div className="col-span-3 xl:col-span-1 px-10">
+                <div className="col-span-3 xl:col-span-1 px-5 xl:px-10">
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-[250px] xl:w-full aspect-square p-2 sticky top-0 mx-auto xl:mx-0">
                         <div className="w-full h-full relative">
                             <canvas id="gradient-canvas" data-transition-in className="rounded-full" />
@@ -43,7 +43,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-3 xl:col-span-2 px-10 mt-5 xl:mt-0">
+                <div className="col-span-3 xl:col-span-2 px-5 xl:px-10 mt-5 xl:mt-0">
                     <h6 className="text-5xl xl:text-[76px] font-['Mango'] xl:leading-[74px]"><RevealUp fontFamily="Mango" lineHeight={screenSize.width < 1280 ? "48px" : "74px"}>I  craft  digital  experiences  combining</RevealUp> <p className="inline-block xl:leading-[64px]"><RevealUp lineHeight={screenSize.width < 1280 ? "48px" : "64px"}>design, motion & development</RevealUp></p></h6>
                     <p className="my-10 text-5xl xl:text-[55px] text-[#BDBDBD] font-['Mango'] leading-[55px]">
                     My creative journey began 5 years ago when I discovered a passion for everything that could be created through a computer. Curious and driven by the desire to learn and practice, I spent countless hours learning graphic and motion design, as well as web development, through online resources and personal projects. All of this naturally led me to pursue a diploma in Computer Information Technology, where I was able to further develop my skills and knowledge in the field. I am now eager to continue my studies in this field and then quickly apply my skills in a professional setting.
@@ -55,7 +55,7 @@ const About = () => {
             </div>
         </section>
 
-        <section className="container mx-auto px-10 xl:px-0">
+        <section className="container mx-auto px-5 xl:px-0">
             <div className="flex gap-5 items-center my-10">
                 <p className="inline-block text-xl">About</p>
                 <LineSlideRight />
@@ -94,7 +94,7 @@ const About = () => {
             </div>
         </section>
 
-        <section className="container mx-auto px-10 xl:px-0">
+        <section className="container mx-auto px-5 xl:px-0">
             <div className="flex gap-5 items-center my-10">
                 <p className="inline-block text-xl">About</p>
                 <LineSlideRight />
@@ -125,7 +125,7 @@ const About = () => {
             </div>
         </section>
 
-        <section className="container mx-auto px-10 xl:px-0">
+        <section className="container mx-auto px-5 xl:px-0">
             <div className="flex gap-5 items-center my-10">
                 <p className="inline-block text-xl">About</p>
                 <LineSlideRight />
@@ -175,7 +175,7 @@ const About = () => {
             </div>
         </section>
 
-        <section className="container mx-auto mb-52 px-10 xl:px-0">
+        <section className="container mx-auto mb-52 px-5 xl:px-0">
             <div className="flex gap-5 items-center my-10">
                 <p className="inline-block text-xl">About</p>
                 <LineSlideRight />
