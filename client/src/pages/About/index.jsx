@@ -7,6 +7,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { RevealUp ,LineSlideRight } from "../../components/Animations/Text";
 import useScreenSize from "../../hooks/useScreenSize";
 
+import { Helmet } from "react-helmet";
+
 const About = () => {
     const screenSize = useScreenSize();
     const { scrollYProgress } = useScroll();
@@ -19,6 +21,16 @@ const About = () => {
     }, []);
     return (
     <>
+        {/* SEO */}
+        <Helmet>
+            <title>About Zulqarnain H. | Web Developer from Lahore</title>
+            <meta name="description" content="Learn more about Syed Zulqarnain Haider, a skilled Web Developer and Network Engineer with 3+ years of experience based in Lahore, Pakistan." />
+            <meta name="keywords" content="About Syed Zulqarnain Haider, Web Developer in Lahore, ReactJS Developer, Network Engineer" />
+            <meta name="robots" content="index, follow" />
+            <link rel="canonical" href="https://www.syed-zulqarnain-haider.vercel.app/about" />
+        </Helmet>
+        {/* SEO */}
+
         <div className="container mx-auto relative my-5 xl:my-24">
             <img src="/web.png" alt="Websites" className="mx-auto xl:mx-0 xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 w-[250px] xl:w-[400px]" loading="lazy" />
             <div className="w-full grid grid-cols-2">

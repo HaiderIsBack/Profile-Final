@@ -25,6 +25,7 @@ const Home = () => {
 
     return (
     <>
+        {/* SEO */}
         <Helmet>
             <title>Zulqarnain H. | Web Developer & Network Engineer</title>
             <meta name="description" content="Syed Zulqarnain Haider is a Web Developer and Network Engineer based in Lahore, Pakistan with over 3 years of experience in web development and network administration." />
@@ -32,6 +33,8 @@ const Home = () => {
             <meta name="robots" content="index, follow" />
             <link rel="canonical" href="https://www.syed-zulqarnain-haider.vercel.app/" />
         </Helmet>
+        {/* SEO */}
+
         <div className="hero">
             <div className="grid grid-cols-12 gap-5 xl:gap-0">
                 <motion.div className="col-span-12 xl:col-span-4 relative text-center xl:text-right flex flex-col justify-center pr-0 xl:pr-5 duration-200 select-none" style={{x: leftTrackX}}>
