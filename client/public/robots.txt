@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.syed-zulqarnain-haider.vercel.app/sitemap.xml
