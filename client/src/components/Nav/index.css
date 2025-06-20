@@ -80,3 +80,10 @@
         opacity: 0;
     }
 }
+
+/* Mobile */
+@media (max-width: 768px){
+    .navbar nav menu{
+        gap: 5px;
+    }
+}

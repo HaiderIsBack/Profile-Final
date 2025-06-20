@@ -7,9 +7,9 @@ const DotLink = ({ href, value, target }) => {
     <Link to={href} target={targetAction} className="link-dot-btn">
         <span className="link-dot"><span className="link-dot-arrow" style={{scale: "none", rotate: "none"}}></span></span>
         <p className="link-dot-text">
-           <span className="hidden-text text-3xl">{value}</span>
-           <span className="text-1 text-3xl">{value}</span>
-           <span className="text-2 text-3xl">{value}</span>
+           <span className="hidden-text text-2xl xl:text-3xl">{value}</span>
+           <span className="text-1 text-2xl xl:text-3xl">{value}</span>
+           <span className="text-2 text-2xl xl:text-3xl">{value}</span>
         </p>
     </Link>
     );
@@ -20,9 +20,9 @@ const DotDownloadLink = ({ href, value }) => {
     <a href={href} download className="link-dot-btn">
         <span className="link-dot"><span className="link-dot-arrow" style={{scale: "none", rotate: "none"}}></span></span>
         <p className="link-dot-text">
-           <span className="hidden-text text-3xl">{value}</span>
-           <span className="text-1 text-3xl">{value}</span>
-           <span className="text-2 text-3xl">{value}</span>
+           <span className="hidden-text text-2xl xl:text-3xl">{value}</span>
+           <span className="text-1 text-2xl xl:text-3xl">{value}</span>
+           <span className="text-2 text-2xl xl:text-3xl">{value}</span>
         </p>
     </a>
     );

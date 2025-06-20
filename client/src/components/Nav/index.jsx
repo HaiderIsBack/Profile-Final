@@ -20,9 +20,9 @@ const Nav = () => {
             <div className="logo">
                 <Link to="/" className="link-btn">
                     <h1 className="link-text">
-                        <span className="hidden-text">ZULQARNAIN H.</span>
-                        <span className="text-1">ZULQARNAIN H.</span>
-                        <span className="text-2">ZULQARNAIN H.</span>
+                        <span className="hidden-text text-2xl xl:text-5xl">ZULQARNAIN H.</span>
+                        <span className="text-1 text-2xl xl:text-5xl">ZULQARNAIN H.</span>
+                        <span className="text-2 text-2xl xl:text-5xl">ZULQARNAIN H.</span>
                     </h1>
                 </Link>
             </div>
@@ -31,27 +31,27 @@ const Nav = () => {
                     <li>
                         <Link to="/" className={`link-btn nav-links ${currentRoute === "/" ? "active" : ""}`}>
                             <p className="link-text">
-                                <span className="hidden-text">Home</span>
-                                <span className="text-1">Home</span>
-                                <span className="text-2">Home</span>
+                                <span className="hidden-text text-sm xl:text-[22px]">Home</span>
+                                <span className="text-1 text-sm xl:text-[22px]">Home</span>
+                                <span className="text-2 text-sm xl:text-[22px]">Home</span>
                             </p>
                         </Link>
                     </li>
                     <li>
                         <Link to="/projects" className={`link-btn nav-links ${currentRoute === "/projects" ? "active" : ""}`}>
                             <p className="link-text">
-                                <span className="hidden-text">Projects</span>
-                                <span className="text-1">Projects</span>
-                                <span className="text-2">Projects</span>
+                                <span className="hidden-text text-sm xl:text-[22px]">Projects</span>
+                                <span className="text-1 text-sm xl:text-[22px]">Projects</span>
+                                <span className="text-2 text-sm xl:text-[22px]">Projects</span>
                             </p>
                         </Link>
                     </li>
                     <li>
                         <Link to="/about" className={`link-btn nav-links ${currentRoute === "/about" ? "active" : ""}`}>
                             <p className="link-text">
-                                <span className="hidden-text">About</span>
-                                <span className="text-1">About</span>
-                                <span className="text-2">About</span>
+                                <span className="hidden-text text-sm xl:text-[22px]">About</span>
+                                <span className="text-1 text-sm xl:text-[22px]">About</span>
+                                <span className="text-2 text-sm xl:text-[22px]">About</span>
                             </p>
                         </Link>
                     </li>

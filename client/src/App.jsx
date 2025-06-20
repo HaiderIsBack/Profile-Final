@@ -2,6 +2,8 @@ import "./App.css";
 import { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import useScreenSize from "./hooks/useScreenSize";
+
 import Orb from "./components/Orb";
 import Nav from "./components/Nav";
 import PageTransition from "./components/PageTransition";
@@ -12,11 +14,12 @@ import Home from "./pages/Home";
 const About = lazy(() => import("./pages/About"));
 
 const App = () => {
+  const screenSize = useScreenSize();
   
   return (
     <main>
        <Router>
-          <Orb />
+          {screenSize.width > 676 && <Orb />}
           <Nav />
           <Routes>
               <Route path="/" element={<PageTransition><Home /></PageTransition>} />

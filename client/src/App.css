@@ -237,3 +237,10 @@
       opacity: 0;
    }
 }
+
+@media (max-width: 768px) {
+  .dot{
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}

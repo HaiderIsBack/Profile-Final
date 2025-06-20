@@ -22,14 +22,14 @@ const Home = () => {
     return (
     <>
         <div className="hero">
-            <div className="grid grid-cols-12">
-                <motion.div className="col-span-4 relative text-right flex flex-col justify-center pr-5 duration-200 select-none" style={{x: leftTrackX}}>
-                    <h2 className="text-[64px] leading-[58px] mb-[-1rem]"><RevealUp lineHeight={"45px"}>ZULQARNAIN H.</RevealUp></h2>
-                    <p className="text-xl"><RevealUp lineHeight={"25px"}>based in Lahore, Pakistan</RevealUp></p>
-                    <p className="text-xl flex justify-end items-baseline mt-[-1rem]"><span className="available-signal"></span> <RevealUp lineHeight={"25px"}>Available for a full-time position</RevealUp></p>
+            <div className="grid grid-cols-12 gap-5 xl:gap-0">
+                <motion.div className="col-span-12 xl:col-span-4 relative text-center xl:text-right flex flex-col justify-center pr-5 duration-200 select-none" style={{x: leftTrackX}}>
+                    <h2 className="text-5xl xl:text-[64px] leading-[58px] -mb-[1.3rem] xl:-mb-[1rem]"><RevealUp lineHeight={"45px"}>ZULQARNAIN H.</RevealUp></h2>
+                    <p className="text-md xl:text-xl"><RevealUp lineHeight={"25px"}>based in Lahore, Pakistan</RevealUp></p>
+                    <p className="text-md xl:text-xl flex justify-center xl:justify-end items-baseline -mt-[10px] xl:-mt-[1rem]"><span className="available-signal"></span> <RevealUp lineHeight={"25px"}>Available for a full-time position</RevealUp></p>
                 </motion.div>
-                <div className="col-span-4 flex justify-center items-center">
-                    <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full aspect-square p-2">
+                <div className="col-span-12 xl:col-span-4 flex justify-center items-center">
+                    <div className="border-[1px] border-[var(--accent-color)] rounded-full w-[250px] md:w-[380px] xl:w-full aspect-square p-2">
                         <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
@@ -40,7 +40,7 @@ const Home = () => {
                         </motion.div>
                     </div>
                 </div>
-                <motion.div className="col-span-4 flex flex-col justify-center pl-5 duration-200 select-none" style={{ x: rightTrackX }}>
+                <motion.div className="col-span-12 xl:col-span-4 flex flex-col justify-center pl-5 duration-200 select-none text-center xl:text-left" style={{ x: rightTrackX }}>
                     <h2 className="text-[64px] leading-[58px]"><RevealUp lineHeight={"58px"}>Web Developer</RevealUp></h2>
                     <h2 className="text-[64px] leading-[58px] mt-[-1rem]"><RevealUp lineHeight={"58px"}>& Network Engineer</RevealUp></h2>
                 </motion.div>

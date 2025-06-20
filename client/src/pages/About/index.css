@@ -25,3 +25,9 @@
     width: 50px;
     height: 40px;
 }
+
+@media (max-width: 768px){
+  .link-chain{
+    transform: scale(0.6);
+  }
+}
