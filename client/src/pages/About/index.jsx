@@ -60,7 +60,7 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3">
                 <div className="col-span-1">
-                    <h2 className="text-[70px] font-['Mango']"><RevealUp>Talents</RevealUp></h2>
+                    <h2 className="text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Talents</RevealUp></h2>
                 </div>
                 <div className="col-span-2">
                     <div className="grid grid-cols-2">
@@ -99,7 +99,7 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3">
                 <div className="col-span-1">
-                    <h2 className="text-[70px] font-['Mango']"><RevealUp>Skills</RevealUp></h2>
+                    <h2 className="text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Skills</RevealUp></h2>
                 </div>
                 <div className="col-span-2">
                     <div className="flex items-center flex-wrap gap-y-5">
@@ -130,7 +130,7 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3">
                 <div className="col-span-1">
-                    <h2 className="text-[70px] font-['Mango']"><RevealUp>Experience</RevealUp></h2>
+                    <h2 className="text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Experience</RevealUp></h2>
                 </div>
                 <div className="col-span-2 pt-3">
                     <div className="mb-5">
@@ -180,7 +180,7 @@ const About = () => {
             </div>
             <div className="grid grid-cols-3">
                 <div className="col-span-1">
-                    <h2 className="text-[70px] font-['Mango']"><RevealUp>Certifications</RevealUp></h2>
+                    <h2 className="text-[70px] font-['Mango']"><RevealUp fontFamily="Mango">Certifications</RevealUp></h2>
                 </div>
                 <div className="col-span-2">
                     <div className="col-span-1 mb-5">
