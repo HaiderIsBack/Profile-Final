@@ -19,7 +19,7 @@ const App = () => {
   return (
     <main>
        <Router>
-          {screenSize.width > 676 && <Orb />}
+          {screenSize.width > 1024 && <Orb />}
           <Nav />
           <Routes>
               <Route path="/" element={<PageTransition><Home /></PageTransition>} />
