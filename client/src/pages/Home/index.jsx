@@ -20,7 +20,11 @@ const Home = () => {
         window.scrollTo(0, 0);
 
         const gradient = new Gradient();
-        gradient.initGradient('#gradient-canvas')
+        gradient.initGradient('#gradient-canvas');
+
+        return () => {
+            gradient.disconnect();
+        };
     }, []);
 
     return (

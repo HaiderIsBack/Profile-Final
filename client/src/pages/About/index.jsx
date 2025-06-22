@@ -18,6 +18,10 @@ const About = () => {
     useEffect(() => {
         const gradient = new Gradient();
         gradient.initGradient("#gradient-canvas");
+
+        return () => {
+            gradient.disconnect();
+        };
     }, []);
     return (
     <>
