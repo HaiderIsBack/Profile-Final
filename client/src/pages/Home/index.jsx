@@ -5,7 +5,6 @@ import DotLink from "../../components/DotLink";
 import ScrollSlider from "../../components/ScrollSlider";
 import { Gradient } from "../../assets/Gradient";
 import { RevealUp, LineSlideLeft, LineSlideRight } from "../../components/Animations/Text";
-import useScreenSize from "../../hooks/useScreenSize";
 
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
@@ -47,7 +46,6 @@ const SplitTextReveal = ({ children, className = '' }) => {
 };
 
 const Home = () => {
-    const screenSize = useScreenSize();
     const { scrollYProgress } = useScroll();
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 200]);
@@ -111,13 +109,13 @@ const Home = () => {
                 <LineSlideLeft />                
             </div>
             <div className="col-span-6 xl:col-span-4 flex justify-center items-center">
-                <h2 className="text-lg xl:text-[49px] leading-5 xl:leading-10 -mt-[0.5rem] xl:mt-[-1rem]"><RevealUp lineHeight={"40px"}>Discover my creative expertise</RevealUp></h2>
+                <h3 className="text-lg xl:text-[49px] leading-5 xl:leading-10 -mt-[0.5rem] xl:mt-[-1rem]"><RevealUp lineHeight={"40px"}>Discover my creative expertise</RevealUp></h3>
             </div>
             <div className="col-span-3 xl:col-span-4 px-5 xl:px-10">
                 <LineSlideRight />
             </div>
         </div>
-        <h5 className="text-center font-['Rajdhani'] text-sm xl:text-[16px]">Checkout some of my projects by area of expertise</h5>
+        <h3 className="text-center font-['Rajdhani'] text-sm xl:text-[16px]">Checkout some of my projects by area of expertise</h3>
         <div className="scroll-slider-container">
             <div className="">
                 <ScrollSlider text={"Web Development"} imgSrc={"/web.png"} offset="-30%" direction={"left"} />
@@ -127,7 +125,7 @@ const Home = () => {
                     <LineSlideLeft />                    
                 </div>
                 <div className="col-span-4 xl:col-span-2 flex justify-center">
-                    <h2 className="text-sm xl:text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
+                    <h4 className="text-sm xl:text-[25px] leading-[5px] text-gray-400">Click here to view projects</h4>
                 </div>
                 <div className="col-span-4 xl:col-span-5 px-5 xl:px-10">
                     <LineSlideRight />
@@ -139,7 +137,7 @@ const Home = () => {
                     <LineSlideLeft />                    
                 </div>
                 <div className="col-span-4 xl:col-span-2 flex justify-center">
-                    <h2 className="text-sm xl:text-[25px] leading-[5px] text-gray-400">Click here to view projects</h2>
+                    <h4 className="text-sm xl:text-[25px] leading-[5px] text-gray-400">Click here to view projects</h4>
                 </div>
                 <div className="col-span-4 xl:col-span-5 px-5 xl:px-10">
                     <LineSlideRight />

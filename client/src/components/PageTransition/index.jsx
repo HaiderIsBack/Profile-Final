@@ -1,7 +1,13 @@
 import { AnimatePresence, useMotionValue, useAnimation, motion, animate } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Custom_Ease } from '../Constants';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { SplitText } from 'gsap/SplitText';
+
+gsap.registerPlugin(SplitText);
 
 const pathnames = {
   "/": "Home",
@@ -101,7 +107,7 @@ const Count = ({ countComplete }) => {
       <motion.h2
         animate={completeAnimation}
         initial={{ x: "-50%", y: "-50%", opacity: 1 }}
-        className="text-4xl lg:text-[76px] font-bold text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none"
+        className="text-5xl lg:text-[10vw] font-bold font-['Mango'] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none"
       >
         {count}%
       </motion.h2>
@@ -109,15 +115,38 @@ const Count = ({ countComplete }) => {
 };
 
 const PathnameText = ({ pathname, textAnimationComplete }) => {
+  const headingRef = useRef(null);
+
+  useGSAP(() => {
+    const split = SplitText.create(headingRef.current, {
+      type: "chars",
+      mask: true,
+      charsClass: "char",
+    });
+
+    gsap.fromTo(split.chars, {
+      y: "100%",
+    },{
+      y: "0%",
+      duration: 0.5,
+      ease: Custom_Ease,
+      stagger: 0.1,
+    });
+
+    return () => {
+      split.revert();
+    }
+  }, { scope: headingRef });
   return (
-    <motion.h1 
+    <motion.h2 
     initial={{ x: "-50%", y: "100%", opacity: 0 }}
     animate={{ y: "-50%", opacity: 1, transition: { duration: 0.5, ease: Custom_Ease } }}
     exit={{ y: "-200%", opacity: 0, transition: { duration: 0.5, ease: Custom_Ease } }}
     onAnimationComplete={textAnimationComplete}
-    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-4xl lg:text-[76px] font-bold text-white pointer-events-none">
+    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-5xl lg:text-[10vw] font-bold font-['Mango'] text-white pointer-events-none"
+    ref={headingRef}>
       {pathnames[pathname] || "Home"}
-    </motion.h1>
+    </motion.h2>
   );
 }
 
