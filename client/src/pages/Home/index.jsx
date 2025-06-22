@@ -14,7 +14,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const SplitTextReveal = ({ children, className = '' }) => {
     const elRef = useRef(null);

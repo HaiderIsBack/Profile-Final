@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { RevealUp ,LineSlideRight } from "../../components/Animations/Text";
 import useScreenSize from "../../hooks/useScreenSize";
 
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
     const screenSize = useScreenSize();
