@@ -26,7 +26,7 @@ const App = () => {
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           </Routes>
           <Footer />
-          {import.meta.env.VITE_USER_NODE_ENV === "development" && <MemoryMonitor />}
+          {import.meta.env.MODE === "development" && <MemoryMonitor />}
        </Router>
     </main>
   );
