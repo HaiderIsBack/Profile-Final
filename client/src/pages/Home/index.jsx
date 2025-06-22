@@ -1,5 +1,5 @@
 import "./index.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import DotLink from "../../components/DotLink";
 import ScrollSlider from "../../components/ScrollSlider";
@@ -7,8 +7,44 @@ import { Gradient } from "../../assets/Gradient";
 import { RevealUp, LineSlideLeft, LineSlideRight } from "../../components/Animations/Text";
 import useScreenSize from "../../hooks/useScreenSize";
 
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 import { Helmet } from "react-helmet";
 
+const SplitTextReveal = ({ children, className = '' }) => {
+    const elRef = useRef(null);
+
+    useGSAP(() => {
+        const split = SplitText.create(elRef.current, {
+            types: "lines",
+            mask: true,
+            autoSplit: true,
+            lineClass: "line",
+        });
+
+        gsap.from(split.lines, {
+            y: 200,
+            stagger: 0.1,
+            duration: 0.9,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: elRef.current,
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+            },
+        });
+
+        return () => {
+            split.revert(); // Clean up the SplitText instance
+        }
+    }, { scope: elRef });
+    return <span ref={elRef} className={className}>{children}</span>;
+};
 
 const Home = () => {
     const screenSize = useScreenSize();
@@ -40,7 +76,7 @@ const Home = () => {
         {/* SEO */}
 
         <div className="hero">
-            <div className="w-full h-screen lg:h-[75vh] grid grid-cols-12 gap-5 xl:gap-0">
+            <div className="grid grid-cols-12 gap-5 xl:gap-0">
                 <motion.div className="col-span-12 xl:col-span-4 relative text-center xl:text-right flex flex-col justify-center pr-0 xl:pr-5 duration-200 select-none" style={{x: leftTrackX}}>
                     <h2 className="text-5xl xl:text-[64px] leading-[58px] -mb-[1.3rem] xl:-mb-[1rem]"><RevealUp lineHeight={"45px"}>ZULQARNAIN H.</RevealUp></h2>
                     <p className="text-md xl:text-xl"><RevealUp lineHeight={"25px"}>based in Lahore, Pakistan</RevealUp></p>
@@ -137,7 +173,7 @@ const MaskedTextSection = () => {
     }, []);
     return (
         <div className="mask-text relative overflow-visible" id="mask-container">
-            <p className="text-xl xl:text-[64px] leading-5 xl:leading-[58px] pt-24 xl:pt-52 pb-24 xl:pb-52 px-5 xl:px-10"><RevealUp>I am a full-stack Web Developer with a</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>3+ years</RevealUp></span> <RevealUp>of experience with</RevealUp> <span className="text-[var(--accent-color)]"><RevealUp>enthusiasm</RevealUp></span> <RevealUp>of learning new technologies and trends. The diversity of</RevealUp> <RevealUp>my skills allows me to approach design challenges from multiple</RevealUp> <RevealUp>perspectives.</RevealUp></p>
+            <p className="text-3xl xl:text-[64px]  xl:leading-[58px] pt-24 xl:pt-52 pb-24 xl:pb-52 px-5 xl:px-10"><SplitTextReveal>I am a full-stack Web Developer with a <span className="text-[var(--accent-color)]">3+ years</span> of experience with <span className="text-[var(--accent-color)]">enthusiasm</span> of learning new technologies and trends. The diversity of my skills allows me to approach design challenges from multiple perspectives.</SplitTextReveal></p>
             <motion.div className="text-4xl xl:text-[40px] hidden xl:block leading-[80px] mask-paragraph pt-24 xl:pt-52 pb-24 xl:pb-52 px-10"
             animate={{
                 WebkitMaskPosition: `${mousePos.x - size / 2}px ${mousePos.y - size / 2}px`,

@@ -18,3 +18,7 @@
     mask-size: 40px;
     color: black;
 }
+
+.line{
+    overflow: hidden;
+}

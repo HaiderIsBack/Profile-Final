@@ -16,7 +16,6 @@ const About = lazy(() => import("./pages/About"));
 
 const App = () => {
   const screenSize = useScreenSize();
-  
   return (
     <main>
        <Router>
@@ -27,8 +26,7 @@ const App = () => {
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           </Routes>
           <Footer />
-          {/* {import.meta.env.NODE_ENV === "development" && <MemoryMonitor />} */}
-          <MemoryMonitor />
+          {import.meta.env.VITE_USER_NODE_ENV === "development" && <MemoryMonitor />}
        </Router>
     </main>
   );
