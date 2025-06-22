@@ -156,6 +156,7 @@ const Orb = () => {
         transform: "translate(-50%, -50%) scale(1)"
       }, { duration: 100, fill: "forwards" });
     }
+    // Cleanup event listeners
 
     const viewBtns = document.querySelectorAll(".view-btn");
     viewBtns.forEach(btn => {

@@ -8,6 +8,7 @@ import Orb from "./components/Orb";
 import Nav from "./components/Nav";
 import PageTransition from "./components/PageTransition";
 import Footer from "./components/Footer";
+import MemoryMonitor from "./components/MemoryMonitor";
 
 import Home from "./pages/Home";
 
@@ -26,6 +27,8 @@ const App = () => {
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           </Routes>
           <Footer />
+          {/* {import.meta.env.NODE_ENV === "development" && <MemoryMonitor />} */}
+          <MemoryMonitor />
        </Router>
     </main>
   );

@@ -40,7 +40,7 @@ const Home = () => {
         {/* SEO */}
 
         <div className="hero">
-            <div className="grid grid-cols-12 gap-5 xl:gap-0">
+            <div className="w-full h-screen lg:h-[75vh] grid grid-cols-12 gap-5 xl:gap-0">
                 <motion.div className="col-span-12 xl:col-span-4 relative text-center xl:text-right flex flex-col justify-center pr-0 xl:pr-5 duration-200 select-none" style={{x: leftTrackX}}>
                     <h2 className="text-5xl xl:text-[64px] leading-[58px] -mb-[1.3rem] xl:-mb-[1rem]"><RevealUp lineHeight={"45px"}>ZULQARNAIN H.</RevealUp></h2>
                     <p className="text-md xl:text-xl"><RevealUp lineHeight={"25px"}>based in Lahore, Pakistan</RevealUp></p>
