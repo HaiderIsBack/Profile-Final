@@ -78,17 +78,19 @@ const Orb = () => {
       }
     };
 
-    const handleEmailClick = (emailText) => {
-      navigator.clipboard.writeText(emailText).then(() => {
-        const orbContent = parentOrbRef.current?.querySelector(".orb-content");
-        if (orbContent) {
-          orbContent.innerHTML = "<p>Copied</p>";
-          setTimeout(() => {
-            orbContent.innerHTML = "<p>Copy</p>";
-          }, 2000);
-        }
-      });
-    };
+    const createEmailClickHandler = (emailText) => {
+      return function handleEmailClick() {
+        navigator.clipboard.writeText(emailText).then(() => {
+          const orbContent = parentOrbRef.current?.querySelector(".orb-content");
+          if (orbContent) {
+            orbContent.innerHTML = "<p>Copied</p>";
+            setTimeout(() => {
+              orbContent.innerHTML = "<p>Copy</p>";
+            }, 2000);
+          }
+        });
+      };
+    }
 
     const handleMaskTextHover = () => {
       animate(parentOrbRef.current, {
@@ -128,42 +130,56 @@ const Orb = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
 
+    const handleViewMouseOver = () => handleHover("View");
+    const handleEmailLinkMouseOver = () => handleHover("Copy");
+
+    const handleHyperlinkMouseOver = () => {
+      animate(parentOrbRef.current, {
+        width: "100px",
+        height: "100px"
+      }, { duration: 200, fill: "forwards" });
+
+      animate(childOrbRef.current, {
+        opacity: 0,
+        transform: "translate(-50%, -50%) scale(0)"
+      }, { duration: 100, fill: "forwards" });
+    }
+
+    const handleHyperlinkMouseOut = () => {
+      animate(parentOrbRef.current, {
+        width: "30px",
+        height: "30px"
+      }, { duration: 200, fill: "forwards" });
+
+      animate(childOrbRef.current, {
+        opacity: 1,
+        transform: "translate(-50%, -50%) scale(1)"
+      }, { duration: 100, fill: "forwards" });
+    }
+
     const viewBtns = document.querySelectorAll(".view-btn");
     viewBtns.forEach(btn => {
-      btn.addEventListener("mouseover", () => handleHover("View"));
+      btn.addEventListener("mouseover", handleViewMouseOver);
       btn.addEventListener("mouseout", handleUnhover);
     });
 
     const emailLinks = document.querySelectorAll(".email-link");
     emailLinks.forEach(link => {
-      link.addEventListener("mouseover", () => handleHover("Copy"));
+      const emailText = link.innerText;
+      const handleEmailClick = createEmailClickHandler(emailText);
+      link.addEventListener("mouseover", handleEmailLinkMouseOver);
       link.addEventListener("mouseout", handleUnhover);
-      link.addEventListener("click", () => handleEmailClick(link.innerText));
+      link.addEventListener("click", handleEmailClick);
+      link._handleEmailClick = handleEmailClick; // Store for cleanup
     });
 
     const hyperlinkElems = document.querySelectorAll("a, .nav-links");
     hyperlinkElems.forEach(link => {
-      link.addEventListener("mouseover", () => {
-        animate(parentOrbRef.current, {
-          width: "100px",
-          height: "100px"
-        }, { duration: 200, fill: "forwards" });
-        animate(childOrbRef.current, {
-          opacity: 0,
-          transform: "translate(-50%, -50%) scale(0)"
-        }, { duration: 100, fill: "forwards" });
-      });
+      link.addEventListener("mouseover", handleHyperlinkMouseOver);
+      link.addEventListener("mouseout", handleHyperlinkMouseOut);
 
-      link.addEventListener("mouseout", () => {
-        animate(parentOrbRef.current, {
-          width: "30px",
-          height: "30px"
-        }, { duration: 200, fill: "forwards" });
-        animate(childOrbRef.current, {
-          opacity: 1,
-          transform: "translate(-50%, -50%) scale(1)"
-        }, { duration: 100, fill: "forwards" });
-      });
+      link._hoverIn = handleHyperlinkMouseOver;
+      link._hoverOut = handleHyperlinkMouseOut;
     });
 
     const maskText = document.querySelector(".mask-text");
@@ -175,17 +191,26 @@ const Orb = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       viewBtns.forEach(btn => {
-        btn.removeEventListener("mouseover", () => handleHover("View"));
+        btn.removeEventListener("mouseover", handleViewMouseOver);
         btn.removeEventListener("mouseout", handleUnhover);
       });
       emailLinks.forEach(link => {
-        link.removeEventListener("mouseover", () => handleHover("Copy"));
+        link.removeEventListener("mouseover", handleEmailLinkMouseOver);
         link.removeEventListener("mouseout", handleUnhover);
-        link.removeEventListener("click", () => handleEmailClick(link.innerText));
+        if (link._handleEmailClick) {
+          link.removeEventListener("click", link._handleEmailClick);
+          delete link._handleEmailClick; // Clean up stored handler
+        }
       });
       hyperlinkElems.forEach(link => {
-        link.removeEventListener("mouseover", () => {});
-        link.removeEventListener("mouseout", () => {});
+        if (link._hoverIn) {
+          link.removeEventListener("mouseover", link._hoverIn);
+          delete link._hoverIn; // Clean up stored handler
+        }
+        if (link._hoverOut) {
+          link.removeEventListener("mouseout", link._hoverOut);
+          delete link._hoverOut; // Clean up stored handler
+        }
       });
       if (maskText) {
         maskText.removeEventListener("mouseover", handleMaskTextHover);
