@@ -82,7 +82,7 @@ const Home = () => {
                     <p className="text-md xl:text-xl flex justify-center xl:justify-end items-baseline -mt-[10px] xl:-mt-[1rem]"><span className="available-signal"></span> <RevealUp lineHeight={"25px"}>Available for a full-time position</RevealUp></p>
                 </motion.div>
                 <div className="col-span-12 xl:col-span-4 flex justify-center items-center">
-                    <div className="border-[1px] border-[var(--accent-color)] rounded-full w-[250px] md:w-[380px] xl:w-full aspect-square p-2">
+                    <div className="border-[1px] border-[var(--accent-color)] rounded-full w-full md:w-[380px] xl:w-full aspect-square p-2">
                         <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
