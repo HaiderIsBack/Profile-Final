@@ -21,7 +21,7 @@ const ScrollSlider = ({ text, imgSrc, offset, direction }) => {
                 <ScrollSlide text={text} />
                 <ScrollSlide text={text} />
             </motion.div>
-            <img src={imgSrc} alt={text} className="scroll-slider-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] pointer-events-none" style={{filter: "drop-shadow(0px 0px 76px black)"}} loading="lazy" />
+            <img src={imgSrc} alt={text} className="hidden lg:block scroll-slider-img absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] pointer-events-none" style={{filter: "drop-shadow(0px 0px 76px black)"}} loading="lazy" />
         </div>
     );
 }

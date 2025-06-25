@@ -1,3 +1,5 @@
+import './index.css';
+
 import { AnimatePresence, useMotionValue, useAnimation, motion, animate } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Custom_Ease } from '../Constants';
@@ -143,7 +145,7 @@ const PathnameText = ({ pathname, textAnimationComplete }) => {
     animate={{ y: "-50%", opacity: 1, transition: { duration: 0.5, ease: Custom_Ease } }}
     exit={{ y: "-200%", opacity: 0, transition: { duration: 0.5, ease: Custom_Ease } }}
     onAnimationComplete={textAnimationComplete}
-    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-5xl lg:text-[10vw] font-bold font-['Mango'] text-white pointer-events-none"
+    className="pathname-text absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-5xl lg:text-[10vw] font-bold font-['Mango'] text-white pointer-events-none"
     ref={headingRef}>
       {pathnames[pathname] || "Home"}
     </motion.h2>

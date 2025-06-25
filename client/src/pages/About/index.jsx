@@ -36,7 +36,7 @@ const About = () => {
         {/* SEO */}
 
         <div className="container mx-auto relative my-5 xl:my-24">
-            <img src="/web.png" alt="Websites" className="mx-auto xl:mx-0 xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 w-[250px] xl:w-[400px]" loading="lazy" />
+            <img src="/web.png" alt="Websites" className="mx-auto xl:mx-0 xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 w-[250px] xl:w-[400px] z-10" loading="lazy" />
             <div className="w-full grid grid-cols-2">
                 <motion.div className="col-span-12 xl:col-span-1" style={{x: leftTrackX}}>
                     <h2 className="text-center font-['Mango'] pr-0 xl:pr-5 text-5xl xl:text-[10vw]">Web Developer</h2>
