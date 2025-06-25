@@ -15,14 +15,14 @@ const About = () => {
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -250]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 250]);
 
-    useEffect(() => {
-        const gradient = new Gradient();
-        gradient.initGradient("#gradient-canvas");
+    // useEffect(() => {
+    //     const gradient = new Gradient();
+    //     gradient.initGradient("#gradient-canvas");
 
-        return () => {
-            gradient.disconnect();
-        };
-    }, []);
+    //     return () => {
+    //         gradient.disconnect();
+    //     };
+    // }, []);
     return (
     <>
         {/* SEO */}
@@ -54,7 +54,7 @@ const About = () => {
                 <div className="col-span-3 xl:col-span-1 px-5 xl:px-10">
                     <div className="border-[1px] border-[var(--accent-color)] rounded-full w-[250px] xl:w-full aspect-square p-2 sticky top-0 mx-auto xl:mx-0">
                         <div className="w-full h-full relative">
-                            <canvas id="gradient-canvas" data-transition-in className="rounded-full" />
+                            {/* <canvas id="gradient-canvas" data-transition-in className="rounded-full" /> */}
                             <img src="/zulqarnain.png" alt="Zulqarnain" className="absolute top-0 left-0 w-full h-full rounded-full" loading="lazy" />
                         </div>
                     </div>

@@ -50,16 +50,16 @@ const Home = () => {
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
 
-        const gradient = new Gradient();
-        gradient.initGradient('#gradient-canvas');
+    //     const gradient = new Gradient();
+    //     gradient.initGradient('#gradient-canvas');
 
-        return () => {
-            gradient.disconnect();
-        };
-    }, []);
+    //     return () => {
+    //         gradient.disconnect();
+    //     };
+    // }, []);
 
     return (
     <>
@@ -87,7 +87,7 @@ const Home = () => {
                         animate={{ scale: 1 }}
                         transition={{ duration: 0.4, delay: 1, ease: "easeInOut" }}
                         className="w-full h-full relative">
-                            <canvas id="gradient-canvas" data-transition-in className="rounded-full" />
+                            {/* <canvas id="gradient-canvas" data-transition-in className="rounded-full" /> */}
                             <img src="/zulqarnain.png" alt="Zulqarnain" className="absolute top-0 left-0 w-full h-full rounded-full" loading="lazy" />
                         </motion.div>
                     </div>
