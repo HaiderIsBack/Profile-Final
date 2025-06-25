@@ -109,7 +109,7 @@ const Count = ({ countComplete }) => {
       <motion.h2
         animate={completeAnimation}
         initial={{ x: "-50%", y: "-50%", opacity: 1 }}
-        className="text-5xl lg:text-[10vw] font-bold font-['Mango'] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none"
+        className="text-[65px] lg:text-[10vw] font-bold font-['Mango'] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none"
       >
         {count}%
       </motion.h2>
@@ -145,7 +145,7 @@ const PathnameText = ({ pathname, textAnimationComplete }) => {
     animate={{ y: "-50%", opacity: 1, transition: { duration: 0.5, ease: Custom_Ease } }}
     exit={{ y: "-200%", opacity: 0, transition: { duration: 0.5, ease: Custom_Ease } }}
     onAnimationComplete={textAnimationComplete}
-    className="pathname-text absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-5xl lg:text-[10vw] font-bold font-['Mango'] text-white pointer-events-none"
+    className="pathname-text absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 text-[65px] lg:text-[10vw] font-bold font-['Mango'] text-white pointer-events-none"
     ref={headingRef}>
       {pathnames[pathname] || "Home"}
     </motion.h2>
