@@ -20,9 +20,9 @@ const App = () => {
   return (
     <main>
        <Router>
-        <LenisScroll />
           {screenSize.width > 1024 && <Orb />}
           <Nav />
+          <LenisScroll />
           <Routes>
               <Route path="/" element={<PageTransition><Home /></PageTransition>} />
               <Route path="/about" element={<PageTransition><About /></PageTransition>} />

@@ -50,16 +50,17 @@ const Home = () => {
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -200]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 200]);
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
+    // const gradientRef = useRef(null);
 
-    //     const gradient = new Gradient();
-    //     gradient.initGradient('#gradient-canvas');
+    useEffect(() => {
+        window.scrollTo(0, 0);
 
-    //     return () => {
-    //         gradient.disconnect();
-    //     };
-    // }, []);
+        // gradientRef.current = new Gradient().initGradient('#gradient-canvas');
+
+        // return () => {
+        //     if (gradientRef.current) gradientRef.current.cleanup();
+        // };
+    }, []);
 
     return (
     <>
@@ -98,7 +99,7 @@ const Home = () => {
                 </motion.div>
             </div>
         </div>
-        
+
         <MaskedTextSection />
         <div className="flex justify-center mt-5 mb-36">
             <DotLink href={"/about"} value={"Learn More"} />
@@ -171,7 +172,7 @@ const MaskedTextSection = () => {
     }, []);
     return (
         <div className="mask-text relative overflow-visible" id="mask-container">
-            <p className="text-3xl xl:text-[64px]  xl:leading-[58px] pt-24 xl:pt-52 pb-24 xl:pb-52 px-5 xl:px-10"><SplitTextReveal>I am a full-stack Web Developer with a <span className="text-[var(--accent-color)]">3+ years</span> of experience with <span className="text-[var(--accent-color)]">enthusiasm</span> of learning new technologies and trends. The diversity of my skills allows me to approach design challenges from multiple perspectives.</SplitTextReveal></p>
+            <p className="container mx-auto text-3xl xl:text-[64px]  xl:leading-[58px] pt-24 xl:pt-52 pb-24 xl:pb-52 px-5 xl:px-10"><SplitTextReveal>I am a full-stack Web Developer with a <span className="text-[var(--accent-color)]">3+ years</span> of experience with <span className="text-[var(--accent-color)]">enthusiasm</span> of learning new technologies and trends. The diversity of my skills allows me to approach design challenges from multiple perspectives.</SplitTextReveal></p>
             <motion.div className="text-4xl xl:text-[40px] hidden xl:block leading-[80px] mask-paragraph pt-24 xl:pt-52 pb-24 xl:pb-52 px-10"
             animate={{
                 WebkitMaskPosition: `${mousePos.x - size / 2}px ${mousePos.y - size / 2}px`,
@@ -180,9 +181,7 @@ const MaskedTextSection = () => {
             transition={{
                 type: "tween",
                 ease: "backOut"
-            }}
-            
-            >
+            }}>
                 <p
                 className="font-['Gulzar'] text-right select-none"
                 onMouseEnter={() => setIsHovered(true)}

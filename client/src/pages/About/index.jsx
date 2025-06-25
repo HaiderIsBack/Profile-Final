@@ -2,7 +2,7 @@ import "./index.css";
 import { DotDownloadLink } from "../../components/DotLink";
 import ScrollingLine from "../../components/ScrollingLine";
 import { Gradient } from "../../assets/Gradient";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { RevealUp ,LineSlideRight } from "../../components/Animations/Text";
 import useScreenSize from "../../hooks/useScreenSize";
@@ -15,12 +15,13 @@ const About = () => {
     const leftTrackX = useTransform(scrollYProgress, [0, 1], [0, -250]);
     const rightTrackX = useTransform(scrollYProgress, [0, 1], [0, 250]);
 
+    // const gradientRef = useRef(null);
+
     // useEffect(() => {
-    //     const gradient = new Gradient();
-    //     gradient.initGradient("#gradient-canvas");
+    //     gradientRef.current = new Gradient().initGradient('#gradient-canvas');
 
     //     return () => {
-    //         gradient.disconnect();
+    //         if (gradientRef.current) gradientRef.current.cleanup();
     //     };
     // }, []);
     return (
