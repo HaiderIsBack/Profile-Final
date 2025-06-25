@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import useScreenSize from "./hooks/useScreenSize";
 
+import LenisScroll from "./components/LenisScroll";
 import Orb from "./components/Orb";
 import Nav from "./components/Nav";
 import PageTransition from "./components/PageTransition";
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <main>
        <Router>
+        <LenisScroll />
           {screenSize.width > 1024 && <Orb />}
           <Nav />
           <Routes>
